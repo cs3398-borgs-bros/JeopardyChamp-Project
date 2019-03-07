@@ -64,6 +64,7 @@
         </dependency>
     </dependencies>
     
+    <!-- Build project using Heroku -->
     <build>
         <finalName>jeopardy-champ</finalName>
         

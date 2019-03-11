@@ -14,6 +14,7 @@ Walter: Finding a way of hosting our application on a website to be reached by a
 Luke:
 Elvin:
 Daniel: 
+
 Carter: Figuring out how the interface works along with the dynamic webpage, add changes to jsp text to add the CS history and java
 questions. 
 
@@ -23,6 +24,7 @@ Walter: Next step would be create a "Game Lobby" for users to connect and see th
 Luke:
 Elvin:
 Daniel:
+
 Carter: Next step would be to make the game have a realtime multiplayer aspect so all users can play and the game will update in real
 time. 
 

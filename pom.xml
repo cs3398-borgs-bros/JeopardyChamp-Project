@@ -85,7 +85,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>com.borgs.websocket.Main</mainClass>
+                            <mainClass>com.boye.websocket.Main</mainClass>
                             <name>webapp</name>
                         </program>
                     </programs>

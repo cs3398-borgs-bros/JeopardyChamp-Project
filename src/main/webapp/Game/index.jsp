@@ -320,7 +320,7 @@
 </table>
 
 <div id="options">
-	<h1>Science Masters Jeopardy</h1>
+	<h1>Jeopardy Champ!</h1>
 	<label>Number of Teams</label>
 	<select name="teams" id="teams">
 		<option value="1">1 team</option>		

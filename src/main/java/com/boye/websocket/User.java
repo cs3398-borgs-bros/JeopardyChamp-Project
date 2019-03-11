@@ -1,4 +1,4 @@
-package com.borgs.websocket;
+package com.boye.websocket;
 
 public class User {
 

@@ -1,4 +1,4 @@
-package com.borgs.websocket;
+package com.boye.websocket;
 
 import java.io.File;
 import javax.servlet.ServletException;

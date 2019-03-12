@@ -337,10 +337,10 @@
 </div>
 
 <!-- Testing WebSockets -->
-<div id="users">
-		<td>
-			<p id="test"></p>
-		</td>
+<div>
+	<td>
+		<p id="test"></p>
+	</td>
 </div>
 
 <div id="prompt">

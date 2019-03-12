@@ -58,8 +58,8 @@
 						<td id="tq01" class="cell clean" onclick="prompt.show('q01', 100)">
 							<h3>100</h3>
 							<div class="hide">
-								<div id="q01">What are bones?</div>
-								<div id="aq01">These rigid organs make up the skeleton.</div>
+								<div id="q01">Liskov substituion</div>
+								<div id="aq01">What does the "L" stand for in "SOLID Principles"?</div>
 							</div>
 						</td>
 					
@@ -68,8 +68,8 @@
 						<td id="tq02" class="cell clean" onclick="prompt.show('q02', 100)">
 							<h3>100</h3>
 							<div class="hide">
-								<div id="q02">What are lungs?</div>
-								<div id="aq02">These paired organs allow you to breath in air.</div>
+								<div id="q02">What is volatile memory?</div>
+								<div id="aq02">Type of memory that is lost when power to the computer is shut off</div>
 							</div>
 						</td>
 					
@@ -88,8 +88,8 @@
 						<td id="tq04" class="cell clean" onclick="prompt.show('q04', 100)">
 							<h3>100</h3>
 							<div class="hide">
-								<div id="q04">What are the eyes?</div>
-								<div id="aq04">These structures are the primary organs of vision.</div>
+								<div id="q04">What is kernel?</div>
+								<div id="aq04">The central part of an operating system</div>
 							</div>
 						</td>
 					
@@ -112,8 +112,8 @@
 						<td id="tq11" class="cell clean" onclick="prompt.show('q11', 200)">
 							<h3>200</h3>
 							<div class="hide">
-								<div id="q11">What are vertebrae?</div>
-								<div id="aq11">These are a series of small bones forming the backbone.</div>
+								<div id="q11">What is Software Engineering?</div>
+								<div id="aq11">The application of engineering to the development of software in a systematic method</div>
 							</div>
 						</td>
 					
@@ -122,8 +122,8 @@
 						<td id="tq12" class="cell clean" onclick="prompt.show('q12', 200)">
 							<h3>200</h3>
 							<div class="hide">
-								<div id="q12">What is oxygen?</div>
-								<div id="aq12">This molecule is the most essential inhaled gas.</div>
+								<div id="q12">What is solid-state drive?</div>
+								<div id="aq12">storage device that uses integrated circuit assemblies as memory to store data persistently.</div>
 							</div>
 						</td>
 					
@@ -133,7 +133,7 @@
 							<h3>200</h3>
 							<div class="hide">
 								<div id="q13">4</div>
-								<div id="aq13">how many platforms does java hava</div>
+								<div id="aq13">how many platforms does java have?</div>
 							</div>
 						</td>
 					
@@ -142,8 +142,8 @@
 						<td id="tq14" class="cell clean" onclick="prompt.show('q14', 200)">
 							<h3>200</h3>
 							<div class="hide">
-								<div id="q14">What are eyelids?</div>
-								<div id="aq14">These thin folds of skin cover and protect the eyes.</div>
+								<div id="q14">What is multithreading?</div>
+								<div id="aq14">Running more than one process in a program.</div>
 							</div>
 						</td>
 					
@@ -166,8 +166,8 @@
 						<td id="tq21" class="cell clean" onclick="prompt.show('q21', 300)">
 							<h3>300</h3>
 							<div class="hide">
-								<div id="q21">What is the femur?</div>
-								<div id="aq21">This bone is the top most bone in the leg. Also called the thighbone.</div>
+								<div id="q21">What is a sprint?</div>
+								<div id="aq21">A set period of time during which specific work has to be completed and made ready for review</div>
 							</div>
 						</td>
 					
@@ -176,8 +176,8 @@
 						<td id="tq22" class="cell clean" onclick="prompt.show('q22', 300)">
 							<h3>300</h3>
 							<div class="hide">
-								<div id="q22">What is a stethoscope?</div>
-								<div id="aq22">This medical device used to listen to internal sounds of the human body.</div>
+								<div id="q22">What is a motherboard?</div>
+								<div id="aq22">Device that houses the RAM and CPU</div>
 							</div>
 						</td>
 					
@@ -196,8 +196,8 @@
 						<td id="tq24" class="cell clean" onclick="prompt.show('q24', 300)">
 							<h3>300</h3>
 							<div class="hide">
-								<div id="q24">What are pupils?</div>
-								<div id="aq24">These structures allow light to enter the eyes and strike the retina.</div>
+								<div id="q24">What is Linux?</div>
+								<div id="aq24">Most popular open-source OS</div>
 							</div>
 						</td>
 					
@@ -220,8 +220,10 @@
 						<td id="tq31" class="cell clean" onclick="prompt.show('q31', 400)">
 							<h3>400</h3>
 							<div class="hide">
-								<div id="q31">What is the humerus?</div>
-								<div id="aq31">This bone in the arms runs from the shoulder to the elbow.</div>
+								<div id="q31">What is the decorator pattern?</div>
+								<div id="aq31">A design pattern that allows behavior to be added to an individual 
+									object, dynamically, without affecting the behavior of the other 
+									objects from the same class.</div>
 							</div>
 						</td>
 					
@@ -230,8 +232,8 @@
 						<td id="tq32" class="cell clean" onclick="prompt.show('q32', 400)">
 							<h3>400</h3>
 							<div class="hide">
-								<div id="q32">What is carbon dioxide?</div>
-								<div id="aq32">This molecule is the most exhaled gas by humans.</div>
+								<div id="q32">What is the ALU?</div>
+								<div id="aq32">Part of CPU responsible for arithmetic and logic operations.</div>
 							</div>
 						</td>
 					
@@ -250,8 +252,8 @@
 						<td id="tq34" class="cell clean" onclick="prompt.show('q34', 400)">
 							<h3>400</h3>
 							<div class="hide">
-								<div id="q34">What is the optic nerve?</div>
-								<div id="aq34">This nerve transmits visual information to the brain from the eye.</div>
+								<div id="q34">What is multiprocessor system?</div>
+								<div id="aq34">System with more than one processor</div>
 							</div>
 						</td>
 					
@@ -284,8 +286,8 @@
 						<td id="tq42" class="cell clean" onclick="prompt.show('q42', 500)">
 							<h3>500</h3>
 							<div class="hide">
-								<div id="q42">What is the trachea?</div>
-								<div id="aq42">This hollow tube connects the pharynx to the lungs, allowing the passage of air.</div>
+								<div id="q42">What is a microprocessor?</div>
+								<div id="aq42">an integrated circuit that contains all the functions of a central processing unit of a computer</div>
 							</div>
 						</td>
 					
@@ -304,8 +306,8 @@
 						<td id="tq44" class="cell clean" onclick="prompt.show('q44', 500)">
 							<h3>500</h3>
 							<div class="hide">
-								<div id="q44">What are the irises?</div>
-								<div id="aq44">These structures define the eye color and control how much light enters the eye.</div>
+								<div id="q44">What is GUI</div>
+								<div id="aq44">System that uses buttons and icons rather than a command line.</div>
 							</div>
 						</td>
 					

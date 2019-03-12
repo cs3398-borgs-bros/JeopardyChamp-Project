@@ -18,7 +18,6 @@
 <!-- Reference to style sheet and JavaScript -->
 <link href="StyleSheet.css" rel="stylesheet" type="text/css" >
 <script src="GameScript.js" type="text/javascript"> </script>
-<script src="websocket.js" type="text/javascript"> </script>
 </head>
 
 
@@ -342,6 +341,7 @@
 		<p id="test"></p>
 	</td>
 </div>
+<script src="websocket.js" type="text/javascript"> </script>
 
 <div id="prompt">
 	<h2 id="answer"></h2>

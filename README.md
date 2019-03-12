@@ -18,7 +18,7 @@ questions.
 
 Daniel: Able to research and better understand development of Dynamic Web Applications using Java and the various tools involved (Heroku, Apache Maven, Apache Tomcat, JSP, JavaScript, Servlets). Able to host and manage builds of application using Heroku and the GitHub repo. Made some modifications and updates to the templates, as well as organize some of the structure of the application.
 
-Luke:
+Luke: Introduce questions on Software Engineering, Hardware, and Operating System
 Elvin:
 
 # Project Status/Next Step:
@@ -28,7 +28,7 @@ Carter: Next step would be to make the game have a realtime multiplayer aspect s
 
 Daniel: Work on implementing host features so that users can join the same session. Organization of the jsp.
 
-Luke:
+Luke: Introduce more features the user would want in the system/more user friendly
 Elvin:
 
 

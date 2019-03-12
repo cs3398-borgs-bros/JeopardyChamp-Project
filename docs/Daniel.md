@@ -1,4 +1,4 @@
-Daniel - Jeopardy Champ! Project Research and Accomplishments
+## Daniel - Jeopardy Champ! Project Research and Accomplishments
 
 I have been studying and researching the different tools and languages involved in creating a Dynamic Web application with a main focus in Java. There are many ways to develop a web app, so I have been looking into a structure and tools that can be used by our group that are understandable with the knowledge we already contain.
 

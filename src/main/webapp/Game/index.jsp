@@ -18,6 +18,7 @@
 <!-- Reference to style sheet and JavaScript -->
 <link href="StyleSheet.css" rel="stylesheet" type="text/css" >
 <script src="GameScript.js" type="text/javascript"> </script>
+<script src="websocket.js" type="text/javascript"> </script>
 </head>
 
 
@@ -344,12 +345,10 @@
 
 <!-- Testing WebSockets -->
 <div>
-		<td>
-			<p id="test"></p>
-		</td>
+	<td>
+		<p id="test"></p>
+	</td>
 </div>
 
 </body>
 </html>
-
-<script src="websocket.js" type="text/javascript"> </script>

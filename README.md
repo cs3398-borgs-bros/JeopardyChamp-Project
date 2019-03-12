@@ -11,22 +11,22 @@ Currently, the project can currently be run/built. However, the current project 
 # Feature/Accomplishment:
 Walter: Finding a way of hosting our application on a website to be reached by any PC/Phone through Heroku. JeopardyChamp-Project/docs/Hosting Java application.docx
 
-Luke:
-Elvin:
-Daniel: 
-
 Carter: Figuring out how the interface works along with the dynamic webpage, add changes to jsp text to add the CS history and java
 questions. 
+
+Daniel: Able to research and better understand development of Dynamic Web Applications using Java and the various tools involved (Heroku, Apache Maven, Apache Tomcat, JSP, JavaScript, Servlets). Able to host and manage builds of application using Heroku and the GitHub repo. Made some modifications to the jeopardy template, as well as organize some of the structure of the application.
+
+Luke:
+Elvin:
 
 # Project Status/Next Step:
 Walter: Next step would be create a "Game Lobby" for users to connect and see the same dynamic page.
 
+Carter: Next step would be to make the game have a realtime multiplayer aspect so all users can play and the game will update in real time. 
+
+Daniel: Work on implementing host features so that users can join the same session.
+
 Luke:
 Elvin:
-Daniel:
-
-Carter: Next step would be to make the game have a realtime multiplayer aspect so all users can play and the game will update in real
-time. 
-
 
 

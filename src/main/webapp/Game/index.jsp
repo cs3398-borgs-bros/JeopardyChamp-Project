@@ -2,8 +2,8 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
 
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- Tab Title -->
@@ -12,21 +12,17 @@
 <meta name="description" content="Self-contained Jeopardy template. />
 <meta name="ROBOTS" content="NOODP" />
 
-<!-- NOT BEING USED
+<!-- TO BE IMPLEMENTED
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
-
--->
-
-<!-- Reference to style sheet -->
+<!-- Reference to style sheet and JavaScript -->
 <link href="StyleSheet.css" rel="stylesheet" type="text/css" >
-
 <script src="GameScript.js" type="text/javascript"> </script>
-
+<script src="websocket.js" type="text/javascript"> </script>
 </head>
 
-<body>
 
+<body>
 <table id="game" cellspacing="5" cellpadding="0" class="hide">
 	<thead>
 		<tr>
@@ -338,6 +334,13 @@
 </div>
 
 <div id="stats">
+</div>
+
+<!-- Testing WebSockets -->
+<div id="users">
+		<td>
+			<p id="test"></p>
+		</td>
 </div>
 
 <div id="prompt">

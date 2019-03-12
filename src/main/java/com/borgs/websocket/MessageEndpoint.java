@@ -12,12 +12,21 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
+/** 
+ * @ServerEndpoint gives the relative name for the end point
+ */
 @ServerEndpoint("/message-endpoint")
 public class MessageEndpoint {
     private Timer timer;
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
     
+    /**
+     * @OnOpen allows us to intercept the creation of a new session.
+     * The session class allows us to send data to the user.
+     * In the method onOpen, we'll let the user know that the handshake was 
+     * successful.
+     */
     @OnOpen
     public void onOpen(Session session) {
     	userCon++;
@@ -28,6 +37,10 @@ public class MessageEndpoint {
         
     }
 
+    /**
+     * When a user sends a message to the server, this method will intercept the message
+     * and allow us to react to it. For now the message is read as a String.
+     */
     @OnMessage
     public void onMessage(String message, final Session session) {
         System.out.println("Session " + session.getId() + " message: " + message);
@@ -56,6 +69,10 @@ public class MessageEndpoint {
         
     }
 
+    /**
+     * The user closes the connection.
+     * Note: you can't send messages to the client from this method
+     */
     @OnClose
     public void onClose(Session session) {
         timer.cancel();

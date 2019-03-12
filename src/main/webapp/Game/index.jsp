@@ -323,7 +323,6 @@
 	<h1>Jeopardy Champ!</h1>
 	<label>Number of Teams</label>
 	<select name="teams" id="teams">
-		<option value="1">1 team</option>		
 		<option value="2">2 teams</option>
 		<option value="3">3 teams</option>
 		<option value="4">4 teams</option>
@@ -331,10 +330,6 @@
 		<option value="6">6 teams</option>
 		<option value="7">7 teams</option>
 		<option value="8">8 teams</option>
-		<option value="9">9 teams</option>
-		<option value="10">10 teams</option>	
-		<option value="11">11 teams</option>
-		<option value="12">12 teams</option>	
 	</select>
 	<input class="submit" type="button" id="submit" value="Start" onclick="game.init()" />
 	<p align="center">Press F11 for full-screen mode</p>

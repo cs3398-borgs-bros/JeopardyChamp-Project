@@ -335,24 +335,21 @@
 <div id="stats">
 </div>
 
-<!-- Testing WebSockets -->
-<div>
-	<td>
-		<p id="test"></p>
-	</td>
-</div>
-<script src="websocket.js" type="text/javascript"> </script>
-
 <div id="prompt">
 	<h2 id="answer"></h2>
 	<p><span id="correct-response"><a href="javascript:prompt.showQuestion()">View correct response</a> &nbsp;&nbsp;&nbsp;&nbsp; </span><a href="javascript:prompt.hide()">Continue &raquo;</a></p>
 	
 	<h2 id="question"></h2>
 </div>
+
+<!-- Testing WebSockets -->
+<div>
+		<td>
+			<p id="test"></p>
+		</td>
+</div>
+
 </body>
 </html>
 
-<%
-
-
-%>
+<script src="websocket.js" type="text/javascript"> </script>

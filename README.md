@@ -14,7 +14,7 @@ Walter: Finding a way of hosting our application on a website to be reached by a
 Carter: Figuring out how the interface works along with the dynamic webpage, add changes to jsp text to add the CS history and java
 questions. 
 
-Daniel: Able to research and better understand development of Dynamic Web Applications using Java and the various tools involved (Heroku, Apache Maven, Apache Tomcat, JSP, JavaScript, Servlets). Able to host and manage builds of application using Heroku and the GitHub repo. Made some modifications to the jeopardy template, as well as organize some of the structure of the application.
+Daniel: Able to research and better understand development of Dynamic Web Applications using Java and the various tools involved (Heroku, Apache Maven, Apache Tomcat, JSP, JavaScript, Servlets). Able to host and manage builds of application using Heroku and the GitHub repo. Made some modifications and updates to the templates, as well as organize some of the structure of the application.
 
 Luke:
 Elvin:

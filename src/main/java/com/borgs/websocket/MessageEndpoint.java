@@ -29,7 +29,7 @@ public class MessageEndpoint {
      */
     @OnOpen
     public void onOpen(Session session) {
-    	userCon++;
+        userCon++;
     	
         System.out.println("Open session " + session.getId());
         
@@ -75,7 +75,8 @@ public class MessageEndpoint {
      */
     @OnClose
     public void onClose(Session session) {
-        timer.cancel();
+        if (timer != null)
+            timer.cancel();
         System.out.println("Session " + session.getId() + " is closed.");
         
     }

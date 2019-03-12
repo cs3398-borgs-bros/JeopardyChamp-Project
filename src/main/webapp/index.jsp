@@ -5,7 +5,7 @@
     	<button id="users" onclick="userList()">Users</button>
     	</p>
     
-        <h2>Tomcat-based WebSocket on Heroku Demo</h2>
+        <h2>Tomcat-based WebSocket on Heroku Test</h2>
         <button id="btnGet" onclick="getMessages()">Get Messages</button>
         <button id="btnStop" onclick="stopMessages()" disabled="true">Stop Messages</button>
         <p id="demo"></p>

@@ -20,7 +20,7 @@ Daniel: Able to research and better understand development of Dynamic Web Applic
 
 Luke: Adding questions on Software Engineering, Hardware, and Operating System
 
-Elvin:
+Elvin: Base code and CSS design modifications. Questions/Answers for Java category.
 
 # Project Status/Next Step:
 Walter: Next step would be create a "Game Lobby" for users to connect and see the same dynamic page.
@@ -31,6 +31,6 @@ Daniel: Work on implementing host features so that users can join the same sessi
 
 Luke: Introduce more features the user would want in the system/more user friendly
 
-Elvin:
+Elvin: Continue to modify CSS design as new functioonality is implemented.
 
 

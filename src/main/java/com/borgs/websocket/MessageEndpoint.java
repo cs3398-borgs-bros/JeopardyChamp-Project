@@ -1,6 +1,8 @@
 package com.borgs.websocket;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
@@ -12,16 +14,13 @@ import javax.websocket.server.ServerEndpoint;
 
 /** 
  * @ServerEndpoint gives the relative name for the end point
- * This will be accessed via ws://localhost:8080/EchoChamber/echo
- * Where "localhost" is the address of the host,
- * "EchoChamber" is the name of the package
- * and "echo" is the address to access this class from the server
  */
 @ServerEndpoint("/message-endpoint")
 public class MessageEndpoint {
-
     private Timer timer;
-
+    private List<User> users = new ArrayList<User>();
+    int userCon = 0;
+    
     /**
      * @OnOpen allows us to intercept the creation of a new session.
      * The session class allows us to send data to the user.
@@ -30,18 +29,21 @@ public class MessageEndpoint {
      */
     @OnOpen
     public void onOpen(Session session) {
+        userCon++;
+    	
         System.out.println("Open session " + session.getId());
+        
+        users.add(new User("Client #" + session.getId()));
+        
     }
 
     /**
      * When a user sends a message to the server, this method will intercept the message
-     * and allow us to react to it.
+     * and allow us to react to it. For now the message is read as a String.
      */
     @OnMessage
     public void onMessage(String message, final Session session) {
-        
         System.out.println("Session " + session.getId() + " message: " + message);
-
         if ("GET".equals(message)) {
             timer = new Timer();
             timer.scheduleAtFixedRate(new TimerTask() {
@@ -59,6 +61,12 @@ public class MessageEndpoint {
             timer.cancel();
         }
         
+        if("USER".equals(message)) {
+        	for(int i = 0; i < userCon; i++) {
+        		System.out.println(users.get(i).getID());
+        	}
+        }
+        
     }
 
     /**
@@ -67,7 +75,9 @@ public class MessageEndpoint {
      */
     @OnClose
     public void onClose(Session session) {
-        timer.cancel();
+        if (timer != null)
+            timer.cancel();
         System.out.println("Session " + session.getId() + " is closed.");
+        
     }
 }

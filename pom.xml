@@ -9,7 +9,7 @@
     <url>http://maven.apache.org</url>
     
     <properties>
-        <tomcat.version>8.0.28</tomcat.version>
+        <tomcat.version>8.0.53</tomcat.version>
     </properties>
     
     <dependencies>
@@ -48,7 +48,6 @@
             <artifactId>tomcat-jsp-api</artifactId>
             <version>${tomcat.version}</version>
         </dependency>
-
         <!--critical for WebSocket -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -59,12 +58,11 @@
         <dependency>
             <groupId>javax.websocket</groupId>
             <artifactId>javax.websocket-api</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
     
-    <!-- Build project using Heroku -->
     <build>
         <finalName>jeopardy-champ</finalName>
         

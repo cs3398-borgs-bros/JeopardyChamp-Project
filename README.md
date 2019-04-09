@@ -19,7 +19,7 @@ Carter: Did research on how to establish a game lobby to make our webpage dynami
 
 Daniel: I was able to update the extensions/dependencies to later builds. Dependencies can be found here: [pom.xml](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/pom.xml). I was also able to add a basic main menu with scripting to progress to the lobby and game, but coding for the menu may need to be altered for lobby functionality. The code for the menu can be found at [index.jsp](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/index.jsp) _(see mainmenu. hostgame, joingame, options)_ and [game.js](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/game.js) _(see menu functions)_
 
-Luke: 
+Luke: Able to apply modifications to the CSS. Researched on modifiying the scripts of the web application.
 
 Elvin: 
 
@@ -31,7 +31,7 @@ communication so the project is multiplayer.
 
 Daniel: Fix bugs with menu and work on functionality of lobbies and multiplayer. Work on database implementation.
 
-Luke: 
+Luke: Implement further changes to the webapp to improve functionality.
 
 Elvin: 
 

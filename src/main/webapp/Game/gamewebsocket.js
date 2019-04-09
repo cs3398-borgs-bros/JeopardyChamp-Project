@@ -31,7 +31,7 @@ function stopMessages() {
 }
 
 function getSessionId() {
-    document.getElementById("givenID").innerText = document.getElementById("gameID").value;
+    document.getElementById("givenID").innerText += document.getElementById("gameID").value;
     document.getElementById("hlog").innerText = "Started lobby...\n";
     webSocket.send("GAMEID:" + document.getElementById("gameID").value);
 }

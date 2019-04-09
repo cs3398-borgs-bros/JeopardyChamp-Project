@@ -73,7 +73,11 @@ public class GameEndpoint {
                 }
             }
             if (check == false) {
-                session.getBasicRemote().sendText("NOTFOUND");
+                try {
+                    session.getBasicRemote().sendText("NOTFOUND");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         } else if("USER".equals(message)) {
         	for(int i = 0; i < userCon; i++) {

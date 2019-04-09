@@ -26,7 +26,8 @@ Elvin:
 ### Project Status/Next Step:
 Walter: My next step would be testing and implementation of multiplayer within the game.
 
-Carter:
+Carter:My next step is to further research clinet-server interaction and try to find the best method to implement the client-server 
+communication so the project is multiplayer. 
 
 Daniel: Fix bugs with menu and work on functionality of lobbies and multiplayer. Work on database implementation.
 

@@ -23,7 +23,7 @@ Luke:
 
 Elvin: 
 
-## Project Status/Next Step:
+### Project Status/Next Step:
 Walter: My next step would be testing and implementation of multiplayer within the game.
 
 Carter:

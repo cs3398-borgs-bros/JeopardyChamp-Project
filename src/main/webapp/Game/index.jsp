@@ -523,7 +523,7 @@
 
 	<div id ="hosting" class="hide">
 		<h2 id="givenID"></h2>
-		<ul id="hlog"></ul>
+		<textarea id="hlog" cols="50" rows="5"></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
 	</div>
 
@@ -532,8 +532,8 @@
 
 <!-- Client  -->
 <div id="joingame" class="hide">
+	<h1>Join Game</h1>
 	<div id ="tojoin">
-			<h1>Join Game</h1>
 			<p>Enter name:</p>
 			<input type="text" id="joinerName">
 			<p>Enter host name:</p>
@@ -541,7 +541,7 @@
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
 		</div>
 	<div id ="joining" class="hide">
-		<ul id="jlog"></ul>
+		<textarea id="jlog" cols="50" rows="5"></textarea>
 	</div>
 	<div class="clear"></div>
 </div>

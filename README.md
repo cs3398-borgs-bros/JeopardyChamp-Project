@@ -34,4 +34,7 @@ Luke:
 
 Elvin: 
 
+### Retrospective
+
+[Sprint 2 - Retrospective](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/docs/Borgs_Retrospective%20-%20Sprint%202.pptx)
 

@@ -12,8 +12,8 @@ webSocket.onmessage = function (event) {
     var str = event.data;
     if (str.startsWith("JOINED")) {
         var arr = str.split(":");
-        document.getElementById("hlog").innerHTML(arr[1] + " has joined.");
-        document.getElementById("jlog").innerHTML("You have joined lobby " + arr[0] + "..");
+        document.getElementById("hlog").innerHTML = arr[1] + " has joined.";
+        document.getElementById("jlog").innerHTML = "You have joined lobby " + arr[0] + "..";
     }
     
 };

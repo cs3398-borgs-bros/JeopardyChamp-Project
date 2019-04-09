@@ -3,19 +3,21 @@ package com.borgs.websocket;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.UUID;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import org.apache.catalina.SessionEvent;
-
 /** 
  * @ServerEndpoint gives the relative name for the end point
  */
-@ServerEndpoint("/game-endpoint")
-public class GameEndpoint {
+@ServerEndpoint("/message-endpoint")
+public class MessageEndpoint {
+    private Timer timer;
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
     
@@ -31,7 +33,7 @@ public class GameEndpoint {
     	
         System.out.println("Open session " + session.getId());
         
-        users.add(new User("C-" + session.getId()));
+        users.add(new User("Client #" + session.getId()));
         
     }
 
@@ -42,36 +44,24 @@ public class GameEndpoint {
     @OnMessage
     public void onMessage(String message, final Session session) {
         System.out.println("Session " + session.getId() + " message: " + message);
-
-        if (message.startsWith("GAMEID")) {
-           for (User u: users)
-           {
-               String tempid = "C-" + session.getId();
-                if (tempid.equals(u.getID())) {
-                    String mes = message.substring(7);
-                    u.setSessionID(mes);
-                    u.setSession(session);
-                    break;
-                }
-           }
-           
-        } else if (message.startsWith("JOIN")) {
-
-            String[] m = message.substring(5).split(":");
-            boolean check = false;
-            for (User u: users) {
-                if (m[0].equals(u.getSessionID())) {
-                    check = true;
+        if ("GET".equals(message)) {
+            timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                public void run() {
                     try {
-                        session.getBasicRemote().sendText("JOINED:" + m[1] + ":" + m[0]);
-                        u.getSession().getBasicRemote().sendText("JOINED:" + m[1] + ":" + m[0]);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                        String msg = "Message " + UUID.randomUUID();
+                        System.out.println(msg);
+                        session.getBasicRemote().sendText(msg);
+                    } catch (IOException ex) {
+                        System.err.println(ex.getMessage());
                     }
-                    break;
                 }
-            }
-        } else if("USER".equals(message)) {
+            }, 0, 1000);
+        } else if ("STOP".equals(message)) {
+            timer.cancel();
+        }
+        
+        if("USER".equals(message)) {
         	for(int i = 0; i < userCon; i++) {
         		System.out.println(users.get(i).getID());
         	}
@@ -85,14 +75,8 @@ public class GameEndpoint {
      */
     @OnClose
     public void onClose(Session session) {
-        
-        for (int i = 0; i < users.size(); i++) {
-            String temp = "C-" + session.getId();
-            if (temp.equals(users.get(i).getID())) {
-                users.remove(i);
-                break;
-            }
-        }
+        if (timer != null)
+            timer.cancel();
         System.out.println("Session " + session.getId() + " is closed.");
         
     }

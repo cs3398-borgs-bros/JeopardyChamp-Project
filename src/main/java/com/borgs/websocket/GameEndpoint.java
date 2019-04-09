@@ -51,12 +51,12 @@ public class GameEndpoint {
                     String mes = message.substring(7);
                     u.setSessionID(mes);
                     u.setSession(session);
+                    System.out.println("Session " + session.getId() + " saved lobby information as " + mes);
                     break;
                 }
            }
            
         } else if (message.startsWith("JOIN")) {
-
             String[] m = message.substring(5).split(":");
             boolean check = false;
             for (User u: users) {

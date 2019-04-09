@@ -32,10 +32,15 @@ function stopMessages() {
 
 function getSessionId() {
     document.getElementById("givenID").innerText = document.getElementById("gameID").value;
+    document.getElementById("hlog").innerText = "Started lobby...";
     webSocket.send("GAMEID:" + document.getElementById("gameID").value);
 }
 
 function getClientId() {
+    document.getElementById("hlog").innerText = "Attempting to join lobby...";
+    setTimeout(function(){
+        console.log("User joining lobby attempt..");
+    }, 3000);
     webSocket.send("JOIN:" + document.getElementById("joinerID").value + ":" + document.getElementById("joinerName").value);
 }
 

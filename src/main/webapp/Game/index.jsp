@@ -523,7 +523,7 @@
 
 	<div id ="hosting" class="hide">
 		<h2 id="givenID"></h2>
-		<textarea id="hlog" cols="50" rows="5"></textarea>
+		<textarea id="hlog" cols="50" rows="5" type="text" readonly></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
 	</div>
 
@@ -541,7 +541,7 @@
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
 		</div>
 	<div id ="joining" class="hide">
-		<textarea id="jlog" cols="50" rows="5"></textarea>
+		<textarea id="jlog" cols="50" rows="5" type="text" readonly></textarea>
 	</div>
 	<div class="clear"></div>
 </div>

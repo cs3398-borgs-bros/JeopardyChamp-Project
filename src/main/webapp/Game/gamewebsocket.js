@@ -13,7 +13,7 @@ webSocket.onmessage = function (event) {
     if (str.startsWith("JOINED")) {
         var arr = str.split(":");
         document.getElementById("hlog").innerText += arr[1] + " has joined.\n";
-        document.getElementById("jlog").innerText = "You have joined " + arr[0] + "..";
+        document.getElementById("jlog").innerText += "You have joined " + arr[0] + "..";
     }
     
 };
@@ -32,15 +32,12 @@ function stopMessages() {
 
 function getSessionId() {
     document.getElementById("givenID").innerText = document.getElementById("gameID").value;
-    document.getElementById("hlog").innerText = "Started lobby...";
+    document.getElementById("hlog").innerText = "Started lobby...\n";
     webSocket.send("GAMEID:" + document.getElementById("gameID").value);
 }
 
 function getClientId() {
-    document.getElementById("hlog").innerText = "Attempting to join lobby...";
-    setTimeout(function(){
-        console.log("User joining lobby attempt..");
-    }, 3000);
+    document.getElementById("hlog").innerText = "Attempting to join lobby...\n";
     webSocket.send("JOIN:" + document.getElementById("joinerID").value + ":" + document.getElementById("joinerName").value);
 }
 

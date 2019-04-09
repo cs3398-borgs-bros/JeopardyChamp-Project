@@ -14,6 +14,8 @@ webSocket.onmessage = function (event) {
         var arr = str.split(":");
         document.getElementById("hlog").innerText += arr[1] + " has joined.\n";
         document.getElementById("jlog").innerText += "You have joined " + arr[0] + "..";
+    } else if (str.equals("NOTFOUND")) {
+        document.getElementById("jlog").innerText += "Unable to join session..";
     }
     
 };

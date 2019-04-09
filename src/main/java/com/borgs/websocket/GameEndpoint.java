@@ -57,19 +57,23 @@ public class GameEndpoint {
            }
            
         } else if (message.startsWith("JOIN")) {
-            String[] m = message.substring(5).split(":");
+            String[] m = message.split(":");
             boolean check = false;
             for (User u: users) {
-                if (m[0].equals(u.getSessionID())) {
-                    check = true;
+                if (m[1].equals(u.getSessionID())) {
                     try {
-                        session.getBasicRemote().sendText("JOINED:" + m[1] + ":" + m[0]);
-                        u.getSession().getBasicRemote().sendText("JOINED:" + m[1] + ":" + m[0]);
+                        System.out.println("Session " + session.getId() + " found Session" + u.getSession().getId());
+                        session.getBasicRemote().sendText("JOINED:" + m[2] + ":" + m[1]);
+                        u.getSession().getBasicRemote().sendText("JOINED:" + m[2] + ":" + m[1]);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    check = true;
                     break;
                 }
+            }
+            if (check == false) {
+                session.getBasicRemote().sendText("NOTFOUND");
             }
         } else if("USER".equals(message)) {
         	for(int i = 0; i < userCon; i++) {

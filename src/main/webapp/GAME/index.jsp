@@ -4,24 +4,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!-- Tab Title -->
-<title>Jeopardy Champs</title>
+	<!-- Tab Title -->
+	<title>Jeopardy Champs</title>
 
-<meta name="description" content="Self-contained Jeopardy template. />
-<meta name="ROBOTS" content="NOODP" />
+	<meta name="description" content="Self-contained Jeopardy template. />
+	<meta name="ROBOTS" content="NOODP" />
 
-<!-- TO BE IMPLEMENTED
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+	<!-- TO BE IMPLEMENTED 
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 
-<!-- Reference to style sheet and JavaScript -->
-<link href="StyleSheet.css" rel="stylesheet" type="text/css" >
-<script src="GameScript.js" type="text/javascript"> </script>
-<script src="websocket.js" type="text/javascript"> </script>
+	<!-- Reference to style sheet and JavaScript -->
+	<link href="style.css" rel="stylesheet" type="text/css" >
+	<script src="GameScript.js" type="text/javascript"> </script>
+	<script src="gamewebsocket.js" type="text/javascript"> </script>
 </head>
 
-
+<!-- Game Content -->
 <body>
 <table id="game" cellspacing="5" cellpadding="0" class="hide">
 	<thead>
@@ -309,31 +309,10 @@
 								<div id="q44">What is GUI</div>
 								<div id="aq44">System that uses buttons and icons rather than a command line.</div>
 							</div>
-						</td>
-					
-				
-			</tr>
-		
+						</td>	
+			</tr>	
 	</tbody>
 </table>
-
-<div id="options">
-	<h1>Jeopardy Champ!</h1>
-	<label>Number of Teams</label>
-	<select name="teams" id="teams">
-		<option value="2">2 teams</option>
-		<option value="3">3 teams</option>
-		<option value="4">4 teams</option>
-		<option value="5">5 teams</option>
-		<option value="6">6 teams</option>
-		<option value="7">7 teams</option>
-		<option value="8">8 teams</option>
-	</select>
-	<input class="submit" type="button" id="submit" value="Start" onclick="game.init()" />
-	<p align="center">Press F11 for full-screen mode</p>
-	
-	<div class="clear"></div>
-</div>
 
 <div id="stats">
 </div>
@@ -345,11 +324,69 @@
 	<h2 id="question"></h2>
 </div>
 
-<!-- Testing WebSockets -->
-<div>
-	<td>
-		<p id="test"></p>
-	</td>
+<!-- Main Menu -->
+<div id="mainmenu">
+	<h1>Jeopardy Champ!</h1>
+	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="menu.hostServer()" />
+	<p></p>
+	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="menu.joinServer()" />
+	<p></p>
+	<input class="submit" type="button" id="optsubmit" value="Options" onclick="menu.showOptions()" />
+	
+	<div class="clear"></div>
+</div>
+
+<!-- Host  -->
+<div id="hostgame" class="hide">
+	<h1>Host!</h1>
+	<div id ="tohost">
+		<p>Enter host name:</p>
+		<input type="text" id="gameID" maxlength="6">
+		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="menu.startHosting();getSessionId();" />
+	</div>
+
+	<div id ="hosting" class="hide">
+		<h2 id="givenID"></h2>
+		<ul id="hlog"></ul>
+		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
+	</div>
+
+	<div class="clear"></div>
+</div>
+
+<!-- Client  -->
+<div id="joingame" class="hide">
+	<div id ="tojoin">
+			<h1>Join Game</h1>
+			<p>Enter name:</p>
+			<input type="text" id="joinerName">
+			<p>Enter host name:</p>
+			<input type="text" id="joinerID" maxlength="6">
+			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
+		</div>
+	<div id ="joining" class="hide">
+		<ul id="jlog"></ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<!-- Options Menu -->
+<div id="options" class="hide">
+	<h1>Options</h1>
+	<label>Number of Teams</label>
+	<select name="teams" id="teams">
+		<option value="2">2 teams</option>
+		<option value="3">3 teams</option>
+		<option value="4">4 teams</option>
+		<option value="5">5 teams</option>
+		<option value="6">6 teams</option>
+		<option value="7">7 teams</option>
+		<option value="8">8 teams</option>
+	</select>
+	<input class="submit" type="button" id="saveopt" value="Save" onclick="menu.showMenu()" />
+	<p align="center">Press F11 for full-screen mode</p>
+	
+	<div class="clear"></div>
 </div>
 
 </body>

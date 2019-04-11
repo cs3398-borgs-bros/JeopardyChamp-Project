@@ -51,8 +51,8 @@
 							<div id="q00">
 								<button style="inline-block">Who is Tim Berners Lee?</button>
 								  <button style="inline-block">Who is James Gosling?</button>
-								<button style="inline-block">Who is Bjarne Stroustrup?�</button>
-								<button style="inline-block">Who is Guido van Rossum?�</button>
+								<button style="inline-block">Who is Bjarne Stroustrup?</button>
+								<button style="inline-block">Who is Guido van Rossum?</button>
 							</div>
 							<div id="aq00">
 								The inventor of the World Wide Web.
@@ -68,8 +68,8 @@
 							<div id="q01">
 								<button style="inline-block">What is the Single responsibility principle?</button>
 								  <button style="inline-block">What is Interface segregation?</button>
-								<button style="inline-block">What is� Liskov substituion?�</button>
-								<button style="inline-block">What is Let the user access everything?�</button>
+								<button style="inline-block">What is� Liskov substituion?</button>
+								<button style="inline-block">What is Let the user access everything?</button>
 							</div>
 							<div id="aq01">
 								The "L" in SOLID Principles.
@@ -83,9 +83,9 @@
 						<h3>100</h3>
 						<div class="hide">
 							<div id="q02">
-								<button style="inline-block">What is non-volatile memory?�</button>
+								<button style="inline-block">What is non-volatile memory?</button>
 								  <button style="inline-block">What is volatile memory?</button>
-								<button style="inline-block">What is HDD?��</button>
+								<button style="inline-block">What is HDD?</button>
 								<button style="inline-block">What is SDD?</button>
 							</div>
 							<div id="aq02">
@@ -100,10 +100,10 @@
 						<h3>100</h3>
 						<div class="hide">
 							<div id="q03">
-								<button style="inline-block">What is Bark?�</button>
+								<button style="inline-block">What is Bark?</button>
 								  <button style="inline-block">What is Pine?</button>
-								<button style="inline-block">What is Leaf?��</button>
-								<button style="inline-block">What is Oak?�</button>
+								<button style="inline-block">What is Leaf?</button>
+								<button style="inline-block">What is Oak?</button>
 							</div>
 							<div id="aq03">
 								Original name given for java.
@@ -117,7 +117,7 @@
 						<h3>100</h3>
 						<div class="hide">
 							<div id="q04">
-								<button style="inline-block">What is a kernel?�</button>
+								<button style="inline-block">What is a kernel?</button>
 								  <button style="inline-block">What is the bus?</button>
 								<button style="inline-block">What is a device driver?</button>
 								<button style="inline-block">What is a GUI?</button>
@@ -138,9 +138,9 @@
 						<h3>200</h3>
 						<div class="hide">
 							<div id="q10">
-								<button style="inline-block">Who is Watts Humphrey?��</button>
+								<button style="inline-block">Who is Watts Humphrey?</button>
 								  <button style="inline-block">Who is William Petrie?</button>
-								<button style="inline-block">Who is Alan Turing?�</button>
+								<button style="inline-block">Who is Alan Turing?</button>
 								<button style="inline-block">Who is Grady Booch?</button>
 							</div>
 							<div id="aq10">
@@ -156,8 +156,8 @@
 						<div class="hide">
 							<div id="q11">
 								<button style="inline-block">What is Aerospce Engineering?</button>
-								  <button style="inline-block">What is Software Engineering?�</button>
-								<button style="inline-block">What is Mechanical Engineering?�</button>
+								  <button style="inline-block">What is Software Engineering?</button>
+								<button style="inline-block">What is Mechanical Engineering?</button>
 								<button style="inline-block">What is Civil Engineering?</button>
 							</div>
 							<div id="aq11">

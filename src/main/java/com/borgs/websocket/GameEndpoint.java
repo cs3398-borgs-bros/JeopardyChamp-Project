@@ -24,6 +24,8 @@ public class GameEndpoint {
      * The session class allows us to send data to the user.
      * In the method onOpen, we'll let the user know that the handshake was 
      * successful.
+     * 
+     * This will generate / track user connection. Generating session ID
      */
     @OnOpen
     public void onOpen(Session session) {

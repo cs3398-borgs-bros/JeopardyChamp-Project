@@ -31,7 +31,7 @@
 <!-- Main Menu -->
 <div id="mainmenu">
 	<h1>Jeopardy Champ!</h1>
-	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="" />
+	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="toggleDisplay()" />
 	<p></p>
 	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="" />
 	<p></p>

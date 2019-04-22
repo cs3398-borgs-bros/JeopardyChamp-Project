@@ -20,71 +20,56 @@
 <script src="gamewebsocket.js" type="text/javascript"> </script>
 </head>
 
-<!-- Game Content -->
+<!-- Content of Game and Menus. -->
+<!-- NOTE: menus were previously hidden with jquery libraries and css. 
+		The "onclick=" functions were removed, need to create functions for
+		testing.
+	-->
 <body>
 
 <!-- Main Menu -->
 <div id="mainmenu">
 	<h1>Jeopardy Champ!</h1>
-	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="menu.hostServer()" />
+	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="" />
 	<p></p>
-	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="menu.joinServer()" />
+	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="" />
 	<p></p>
-	<input class="submit" type="button" id="optsubmit" value="Options" onclick="menu.showOptions()" />
+	<input class="submit" type="button" id="optsubmit" value="Options" onclick="" />
 	
 	<div class="clear"></div>
 </div>
 
 <!-- Host  -->
-<div id="hostgame" class="hide">
+<div id="hostgame" >
 	<h1>Host!</h1>
 	<div id ="tohost">
 		<p>Enter host name:</p>
 		<input type="text" id="gameID" maxlength="6">
-		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="menu.startHosting();getSessionId();" />
+		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="" />
 	</div>
 
-	<div id ="hosting" class="hide">
+	<div id ="hosting">
 		<h2 id="givenID">Room: </h2>
 		<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
-		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
+		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="" />
 	</div>
 
 	<div class="clear"></div>
 </div>
 
 <!-- Client  -->
-<div id="joingame" class="hide">
+<div id="joingame">
 	<h1>Join Game</h1>
 	<div id ="tojoin">
 			<p>Enter name:</p>
 			<input type="text" id="joinerName">
 			<p>Enter host name:</p>
 			<input type="text" id="joinerID" maxlength="6">
-			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
+			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="" />
 		</div>
-	<div id ="joining" class="hide">
+	<div id ="joining">
 		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
 	</div>
-	<div class="clear"></div>
-</div>
-
-<!-- Options Menu -->
-<div id="options" class="hide">
-	<h1>Options</h1>
-	<label>Number of Teams</label>
-	<select name="teams" id="teams">
-		<option value="2">2 teams</option>
-		<option value="3">3 teams</option>
-		<option value="4">4 teams</option>
-		<option value="5">5 teams</option>
-		<option value="6">6 teams</option>
-		<option value="7">7 teams</option>
-		<option value="8">8 teams</option>
-	</select>
-	<input class="submit" type="button" id="saveopt" value="Save" onclick="menu.showMenu()" />
-	<p align="center">Press F11 for full-screen mode</p>
-	
 	<div class="clear"></div>
 </div>
 

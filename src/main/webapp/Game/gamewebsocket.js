@@ -32,6 +32,7 @@ function stopMessages() {
     document.getElementById("btnStop").disabled = true;
 }
 
+/*
 function getSessionId() {
     document.getElementById("givenID").innerText += document.getElementById("gameID").value;
     document.getElementById("hlog").innerText = "Started lobby...\n";
@@ -42,6 +43,7 @@ function getClientId() {
     document.getElementById("jlog").innerText = "Attempting to join lobby...\n";
     webSocket.send("JOIN:" + document.getElementById("joinerID").value + ":" + document.getElementById("joinerName").value);
 }
+*/
 
 function userList(){
   	webSocket.send("USER");

@@ -16,6 +16,7 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 
 <!-- Reference to style sheet and JavaScript -->
+<script src="style.css" type="text/css"> </script>
 <script src="game.js" type="text/javascript"> </script>
 <script src="gamewebsocket.js" type="text/javascript"> </script>
 </head>
@@ -40,7 +41,7 @@
 </div>
 
 <!-- Host  -->
-<div id="hostgame" >
+<div id="hostgame" class="hide">
 	<h1>Host!</h1>
 	<div id ="tohost">
 		<p>Enter host name:</p>
@@ -48,7 +49,7 @@
 		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="" />
 	</div>
 
-	<div id ="hosting">
+	<div id ="hosting" class="hide">
 		<h2 id="givenID">Room: </h2>
 		<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="" />
@@ -58,7 +59,7 @@
 </div>
 
 <!-- Client  -->
-<div id="joingame">
+<div id="joingame" class="hide">
 	<h1>Join Game</h1>
 	<div id ="tojoin">
 			<p>Enter name:</p>
@@ -67,7 +68,7 @@
 			<input type="text" id="joinerID" maxlength="6">
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="" />
 		</div>
-	<div id ="joining">
+	<div id ="joining" class="hide">
 		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
 	</div>
 	<div class="clear"></div>

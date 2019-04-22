@@ -41,7 +41,7 @@
 </div>
 
 <!-- Host  -->
-<div id="hostgame" class="hide">
+<div id="hostgame" style="display:none;">
 	<h1>Host!</h1>
 	<div id ="tohost">
 		<p>Enter host name:</p>
@@ -49,7 +49,7 @@
 		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="" />
 	</div>
 
-	<div id ="hosting" class="hide">
+	<div id ="hosting" >
 		<h2 id="givenID">Room: </h2>
 		<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="" />
@@ -59,7 +59,7 @@
 </div>
 
 <!-- Client  -->
-<div id="joingame" class="hide">
+<div id="joingame" style="display:none;">
 	<h1>Join Game</h1>
 	<div id ="tojoin">
 			<p>Enter name:</p>
@@ -68,7 +68,7 @@
 			<input type="text" id="joinerID" maxlength="6">
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="" />
 		</div>
-	<div id ="joining" class="hide">
+	<div id ="joining" >
 		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
 	</div>
 	<div class="clear"></div>

@@ -16,7 +16,7 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 
 <!-- Reference to style sheet and JavaScript -->
-<script src="style.css" type="text/css"> </script>
+<link href="style.css" rel="stylesheet" type="text/css">
 <script src="game.js" type="text/javascript"> </script>
 <script src="gamewebsocket.js" type="text/javascript"> </script>
 </head>

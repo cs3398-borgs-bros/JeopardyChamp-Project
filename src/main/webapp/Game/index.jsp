@@ -31,11 +31,9 @@
 <!-- Main Menu -->
 <div id="mainmenu">
 	<h1>Jeopardy Champ!</h1>
-	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="toggleDisplay()" />
+	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="hostMenu()" />
 	<p></p>
-	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="" />
-	<p></p>
-	<input class="submit" type="button" id="optsubmit" value="Options" onclick="" />
+	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="joinMenu()" />
 	
 	<div class="clear"></div>
 </div>

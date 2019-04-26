@@ -1,8 +1,19 @@
 //Main Menu Scripting
 var menu = {}
-menu.doSomething = function()
+menu.hostMenu = function()
 {
-	;
+	var mm = document.getElementById("mainmenu");
+	var hm = document.getElementById("hostgame");
+	mm.style.display = "none";
+	hm.style.display = "block";
+}
+
+menu.joinMenu = function()
+{
+	var mm = document.getElementById("mainmenu");
+	var jm = document.getElementById("joingame");
+	mm.style.display = "none";
+	jm.style.display = "block";
 }
 
 function toggleDisplay() {
@@ -12,4 +23,4 @@ function toggleDisplay() {
 	} else {
 	  x.style.display = "none";
 	}
-  }
+}

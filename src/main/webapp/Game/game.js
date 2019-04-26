@@ -1,6 +1,6 @@
 //Main Menu Scripting
 var menu = {}
-menu.hostMenu = function()
+menu.hostMenu() = function()
 {
 	var mm = document.getElementById("mainmenu");
 	var hm = document.getElementById("hostgame");
@@ -8,7 +8,7 @@ menu.hostMenu = function()
 	hm.style.display = "block";
 }
 
-menu.joinMenu = function()
+menu.joinMenu() = function()
 {
 	var mm = document.getElementById("mainmenu");
 	var jm = document.getElementById("joingame");

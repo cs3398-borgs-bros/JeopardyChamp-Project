@@ -10,6 +10,7 @@
     
     <properties>
         <tomcat.version>8.0.53</tomcat.version>
+        <tomcat.version.logging>8.5.2</tomcat.version.logging>
     </properties>
     
     <dependencies>
@@ -22,7 +23,7 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-logging-juli</artifactId>
-            <version>${tomcat.version}</version>
+            <version>${tomcat.version.logging}</version>
         </dependency>
         
         <dependency>

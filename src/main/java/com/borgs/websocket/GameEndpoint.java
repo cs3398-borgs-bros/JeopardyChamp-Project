@@ -3,6 +3,8 @@ package com.borgs.websocket;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.websocket.EndpointConfig;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -16,6 +18,7 @@ import org.apache.catalina.SessionEvent;
  */
 @ServerEndpoint("/game-endpoint")
 public class GameEndpoint {
+    private Room room;
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
     
@@ -28,7 +31,7 @@ public class GameEndpoint {
      * This will generate / track user connection. Generating session ID
      */
     @OnOpen
-    public void onOpen(Session session) {
+    public void onOpen(Session session, EndpointConfig config) {
         userCon++;
     	
         System.out.println("Open session " + session.getId());
@@ -42,9 +45,9 @@ public class GameEndpoint {
      * and allow us to react to it. For now the message is read as a String.
      */
     @OnMessage
-    public void onMessage(String message, final Session session) {
+    public void onMessage(final Session session, String message) {
         System.out.println("Session " + session.getId() + " message: " + message);
-
+        session.getUserProperties();
         if (message.startsWith("GAMEID")) {
            for (User u: users)
            {

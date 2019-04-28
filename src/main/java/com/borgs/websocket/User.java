@@ -12,7 +12,7 @@ public class User {
 		private String userName;
 		private String sessionID;
 		private Session session;
-		private Timer ping;
+		private Timer ping = new Timer();
 		
 		public User(final String userID, Session s) {
 			this.userID = userID;
@@ -23,10 +23,10 @@ public class User {
 						String msg = "PING";
 						session.getBasicRemote().sendText(msg);
 					}   catch (IOException ex) {
-						System.out.println(ex.getMessage());
+						System.err.println("PING error :" + ex.getMessage());
 					}
 				}
-			}, 0, 40000);
+			}, 40000, 40000);
 		}
 		
 		public String getID() {	return userID; }

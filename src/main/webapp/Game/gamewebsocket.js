@@ -12,7 +12,7 @@ websocket.onmessage = function (event) {
     var str = event.data.toString();
     //testing
     if (str.startsWith("JOIN:")) {
-        str.replace("JOIN:", "");
+        str.replace('JOIN:', '');
         document.getElementById("hlog").value += str;
         document.getElementById("jlog").value += str;
     }

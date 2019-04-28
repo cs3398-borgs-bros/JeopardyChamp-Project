@@ -78,10 +78,11 @@ public class GameEndpoint {
             if ( rooms.size() > 0) {
                 for (Room r : rooms) {
                     System.out.println("For Loop: Room " + r.getCode());
-                    if (msg[1] == r.getCode()) {
+                    if (msg[1].equalsIgnoreCase(r.getCode())) {
                         System.out.println("FOUND ROOM");
                         r.join(session);
                         System.out.println(msg[0] + " joined room " + msg[1]);
+                        r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
                         break;
                     }
                 }

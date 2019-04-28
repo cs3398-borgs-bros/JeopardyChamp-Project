@@ -9,7 +9,13 @@ websocket.onopen = function () {
 };
 websocket.onmessage = function (event) {
     console.log(event.data);
-    var str = event.data;
+    var str = event.data.toString();
+    //testing
+    if (str.startsWith("JOIN:")) {
+        str.replace("JOIN:", "");
+        document.getElementById("hlog").value += str;
+        document.getElementById("jlog").value += str;
+    }
 };
 websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {

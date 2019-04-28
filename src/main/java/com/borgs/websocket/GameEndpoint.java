@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 import javax.websocket.EndpointConfig;
 import javax.websocket.OnClose;
-//import javax.websocket.OnError;
+import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -137,6 +137,12 @@ public class GameEndpoint {
         
     }
 
+    @OnError 
+    public void onError(Session session, Throwable t) {
+        System.out.println("Error: " + t.getMessage());
+    }
+
+
     /**
      * The user closes the connection.
      * Note: you can't send messages to the client from this method
@@ -154,6 +160,4 @@ public class GameEndpoint {
         System.out.println("Session " + session.getId() + " is closed.");
         
     }
-
-    //@OnError public void onError(Session session) { }
 }

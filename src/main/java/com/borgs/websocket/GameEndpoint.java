@@ -63,7 +63,7 @@ public class GameEndpoint {
         System.out.println(properties.values());
 		if (gamemsg.getMessageType() == MessageType.HOST) {
 			String msgcode = gamemsg.getMessage();
-            if (rooms.isEmpty()) {
+            if (rooms == null) {
                 this.rooms = new HashSet<Room>();
             } 
             else {
@@ -72,7 +72,7 @@ public class GameEndpoint {
         }
         else if (gamemsg.getMessageType() == MessageType.JOIN) {
             String msgcode = gamemsg.getMessage();
-            if ( rooms.isEmpty()) {
+            if ( rooms == null) {
                 //TODO
             }
             else {

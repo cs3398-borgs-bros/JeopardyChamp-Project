@@ -11,8 +11,9 @@ public class Room {
 	private String code = null;
 	private List<Session> sessions = new ArrayList<Session>();
 
-	public Room(String c) {
+	public Room(String c, Session s) {
 		this.code = c;
+		join(s);
 	}
 
 	public String getCode() {	return code;	}	

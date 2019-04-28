@@ -1,8 +1,11 @@
 package com.borgs.websocket;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 
 import javax.websocket.EndpointConfig;
 import javax.websocket.OnClose;
@@ -11,42 +14,81 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.catalina.SessionEvent;
 
-/** 
+/**
  * @ServerEndpoint gives the relative name for the end point
  */
 @ServerEndpoint("/game-endpoint")
 public class GameEndpoint {
-    private Room room;
+    private Set<Room> rooms;
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
-    
+
     /**
-     * @OnOpen allows us to intercept the creation of a new session.
-     * The session class allows us to send data to the user.
-     * In the method onOpen, we'll let the user know that the handshake was 
-     * successful.
+     * @OnOpen allows us to intercept the creation of a new session. The session
+     *         class allows us to send data to the user.
      * 
-     * This will generate / track user connection. Generating session ID
+     *         This will generate / track user connection. Generating session ID
      */
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) {
         userCon++;
-    	
+
         System.out.println("Open session " + session.getId());
-        
+
         users.add(new User("C-" + session.getId()));
-        
+
     }
 
     /**
-     * When a user sends a message to the server, this method will intercept the message
-     * and allow us to react to it. For now the message is read as a String.
+     * When a user sends a message to the server, this method will intercept the
+     * message and allow us to react to it. For now the message is read as a String.
      */
     @OnMessage
     public void onMessage(final Session session, String message) {
-        System.out.println("Session " + session.getId() + " message: " + message);
+
+        ObjectMapper mapper = new ObjectMapper();
+        GameMessage gamemsg = null;
+        try {
+            gamemsg = mapper.readValue(message, GameMessage.class);
+        } catch (IOException e1) {
+            System.out.println(e1.getMessage());
+        }
+
+        Map<String, Object> properties = session.getUserProperties();
+        System.out.println(properties.values());
+		if (gamemsg.getMessageType() == MessageType.HOST) {
+			String msgcode = gamemsg.getMessage();
+            if (rooms.isEmpty()) {
+                this.rooms = new HashSet<Room>();
+            } 
+            else {
+                rooms.add(new Room(msgcode));
+            }
+        }
+        else if (gamemsg.getMessageType() == MessageType.JOIN) {
+            String msgcode = gamemsg.getMessage();
+            if ( rooms.isEmpty()) {
+                //TODO
+            }
+            else {
+                for (Room r : rooms) {
+                    if (msgcode == r.getCode()) {
+                        System.out.println("FOUND ROOM");
+                        r.join(session);
+                        r.sendMessage(" Joined the chat room");
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        /*System.out.println("Session " + session.getId() + " message: " + message);
         session.getUserProperties();
         if (message.startsWith("GAMEID")) {
            for (User u: users)
@@ -88,7 +130,7 @@ public class GameEndpoint {
         	for(int i = 0; i < userCon; i++) {
         		System.out.println(users.get(i).getID());
         	}
-        }
+        }*/
         
     }
 

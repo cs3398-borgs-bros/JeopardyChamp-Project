@@ -1,3 +1,3 @@
 package com.borgs.websocket;
 
-public enum MessageType { LOGIN, MESSAGE }
+public enum MessageType { HOST, JOIN, BROADCAST  }

@@ -1,4 +1,4 @@
-package com.borgs.websocket;
+package com.borgs.chatroom;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,23 +8,10 @@ import javax.websocket.Session;
 
 public class Room {
 	private static Room instance = null;
-	private String code = null;
 	private List<Session> sessions = new ArrayList<Session>();
 
-	public Room(String c) {
-		this.code = c;
-	}
-
-	public String getCode() {	return code;	}	
-
-	public synchronized void join(Session session) { 
-		sessions.add(session); 
-	}
-
-	public synchronized void leave(Session session) { 
-		sessions.remove(session); 
-	}
-
+	public synchronized void join(Session session) { sessions.add(session); }
+	public synchronized void leave(Session session) { sessions.remove(session); }
 	public synchronized void sendMessage(String message) {
 		for (Session session: sessions) {
 			if (session.isOpen()) {
@@ -33,9 +20,9 @@ public class Room {
 			}
 		}
 	}
-	
+
 	public synchronized static Room getRoom() {
-		if (instance == null) { instance = new Room("test"); }
+		if (instance == null) { instance = new Room(); }
 		return instance;
 	}
 }

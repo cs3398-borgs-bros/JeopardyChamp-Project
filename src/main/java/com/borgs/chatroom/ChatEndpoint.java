@@ -1,4 +1,4 @@
-package com.borgs.websocket;
+package com.borgs.chatroom;
 
 import java.io.IOException;
 import java.util.Map;

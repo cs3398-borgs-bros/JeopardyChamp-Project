@@ -31,7 +31,7 @@
 <!-- Main Menu -->
 <div id="mainmenu">
 	<h1>Jeopardy Champ!</h1>
-	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="hostMenu()" />
+	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="hostMenu(); generateCode();" />
 	<p></p>
 	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="joinMenu()" />
 	
@@ -42,13 +42,13 @@
 <div id="hostgame" style="display:none;">
 	<h1>Host!</h1>
 	<div id ="tohost">
-		<p>Enter host name:</p>
-		<input type="text" id="gameID" maxlength="6">
-		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="" />
+		<h2>Room Code:</h2>
+		<h2 id="gameID"></h2>
+		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="hostStart();hostMessage();" />
 	</div>
 
-	<div id ="hosting" >
-		<h2 id="givenID">Room: </h2>
+	<div id ="hosting" style="display:none;">
+		<h2 id="givenID">Room Code: </h2>
 		<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="" />
 	</div>
@@ -62,11 +62,11 @@
 	<div id ="tojoin">
 			<p>Enter name:</p>
 			<input type="text" id="joinerName">
-			<p>Enter host name:</p>
+			<p>Enter Room Code:</p>
 			<input type="text" id="joinerID" maxlength="6">
-			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="" />
+			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="joinStart();joinMessage();" />
 		</div>
-	<div id ="joining" >
+	<div id ="joining" style="display:none;">
 		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
 	</div>
 	<div class="clear"></div>

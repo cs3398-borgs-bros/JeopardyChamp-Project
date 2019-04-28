@@ -1,5 +1,9 @@
 package com.borgs.websocket;
 
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.websocket.Session;
 
 public class User {
@@ -8,32 +12,32 @@ public class User {
 		private String userName;
 		private String sessionID;
 		private Session session;
+		private Timer ping = new Timer();
 		
-		public User(final String userID) {
+		public User(final String userID, Session s) {
 			this.userID = userID;
+			this.session = s;
+			this.ping.scheduleAtFixedRate(new TimerTask() {
+				public void run() {
+					try {
+						String msg = "PING";
+						session.getBasicRemote().sendText(msg);
+					}   catch (IOException ex) {
+						System.err.println("PING error :" + ex.getMessage());
+					}
+				}
+			}, 40000, 40000);
 		}
 		
-		public String getID() {
-			return userID;
-		}
+		public String getID() {	return userID; }
 
-		public String getName() {
-			return userName;
-		}
+		public String getName() { return userName; }
 
-		public String getSessionID() {
-			return sessionID;
-		}
+		public String getSessionID() { return sessionID; }
 
-		public Session getSession() {
-			return session;
-		}
+		public Session getSession() { return session; }
 
-		public void setSessionID(String s) {
-			this.sessionID = s;
-		}
+		public void setSessionID(String s) { this.sessionID = s; }
 
-		public void setSession(Session s) {
-			this.session = s;
-		}
+		public void setSession(Session s) { this.session = s; }
 }

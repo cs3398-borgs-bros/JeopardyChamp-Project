@@ -1,56 +1,33 @@
 var url = (window.location.protocol === "https:" ? "wss:" : "ws:") + "//" + window.location.host + window.location.pathname + "game-endpoint";
 
-// WebSocket
-var websocket = new WebSocket(url);
-websocket.onopen = function () {
+//set up websocket
+var webSocket = new WebSocket(url);
+webSocket.onopen = function () {
     console.log("WebSocket is connected.");
-    ///webSocket.send("Connect");
+    webSocket.send("Connect");
     console.log(event.data);
 };
-websocket.onmessage = function (event) {
+webSocket.onmessage = function (event) {
     console.log(event.data);
-    var str = event.data.toString();
-    if (str.startsWith("JOIN:")) {
-        document.getElementById("hlog").value += str.slice(5);
-        document.getElementById("jlog").value += str.slice(5);
+    var str = event.data;
+    if (str.startsWith("JOINED")) {
+        var arr = str.split(":");
+        document.getElementById("hlog").innerText += arr[1] + " has joined.\n";
+        document.getElementById("jlog").innerText += "You have joined " + arr[0] + "..";
+    } else if (str.equals("NOTFOUND")) {
+        document.getElementById("jlog").innerText += "Unable to join session..";
     }
+    
 };
-websocket.onerror = function(e) {   };
-websocket.onclose = function(e) {
-    console.log("Session closed" + event.data);
-    websocket.close();
-};
 
-//Functions for jsp
-//send messages to server/room
-function hostMessage() {
-    if (websocket != null && websocket.readyState == 1) {
-        var input = document.getElementById("gameID").innerHTML.toString();
-        var message = { messageType: 'HOST', message: input };
-        websocket.send(JSON.stringify(message));
-    }
-}
-
-function joinMessage() {
-    if (websocket != null && websocket.readyState == 1) {
-        var input = document.getElementById("joinerName").value;
-        input += ":";
-        input += document.getElementById("joinerID").value;
-        //TODO need joinername
-        var message = { messageType: 'JOIN', message: input };
-        websocket.send(JSON.stringify(message));
-    }
-}
-
-/*
 //get messages function
 function getMessages() {
-    websocket.send("GET");
+    webSocket.send("GET");
 }
 
 //stop messages function
 function stopMessages() {
-    websocket.send("STOP");
+    webSocket.send("STOP");
     document.getElementById("btnGet").disabled = false;
     document.getElementById("btnStop").disabled = true;
 }
@@ -62,10 +39,8 @@ function getSessionId() {
 }
 
 function getClientId() {
-    document.getElementById("jlog").innerText = "Attempting to join lobby...\n";
     webSocket.send("JOIN:" + document.getElementById("joinerID").value + ":" + document.getElementById("joinerName").value);
 }
-*/
 
 function userList(){
   	webSocket.send("USER");

@@ -5,10 +5,9 @@ import javax.servlet.ServletException;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
-
 public class Main {
+
     public static void main(String[] args) throws ServletException, LifecycleException {
-        //TOMCAT        
         Tomcat tomcat = new Tomcat();
         // The port that we should run on can be set into an environment variable
         // Look for that variable and default to 8080 if it isn't there.

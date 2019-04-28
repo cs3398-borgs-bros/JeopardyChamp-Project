@@ -25,6 +25,7 @@ public class GameEndpoint {
     private static Set<Room> rooms = new HashSet<Room>();
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
+    
 
     /**
      * @OnOpen allows us to intercept the creation of a new session. The session
@@ -35,9 +36,9 @@ public class GameEndpoint {
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) {
         userCon++;
-        session.setMaxIdleTimeout(1000*360);
+        session.setMaxIdleTimeout(-1);
         System.out.println("Open session " + session.getId());
-        users.add(new User("C-" + session.getId()));
+        users.add(new User("C-" + session.getId(), session));
 
     }
 

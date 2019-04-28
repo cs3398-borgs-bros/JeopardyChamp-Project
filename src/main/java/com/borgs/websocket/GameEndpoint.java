@@ -153,12 +153,21 @@ public class GameEndpoint {
     @OnClose
     public void onClose(Session session) {
         
+        boolean check = false;
         for (int i = 0; i < users.size(); i++) {
             String temp = "C-" + session.getId();
             if (temp.equals(users.get(i).getID())) {
+                users.get(i).cancelPing();
                 users.remove(i);
+                check = true;
                 break;
             }
+        }
+        if (check)
+        {
+            System.out.println("User successfully removed.");
+        } else {
+            System.out.println("User removal did not occur!");
         }
         System.out.println("Session " + session.getId() + " is closed.");
         

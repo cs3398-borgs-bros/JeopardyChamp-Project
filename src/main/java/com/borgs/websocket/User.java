@@ -12,11 +12,12 @@ public class User {
 		private String userName;
 		private String sessionID;
 		private Session session;
-		private Timer ping = new Timer();
+		private Timer ping;
 		
 		public User(final String userID, Session s) {
 			this.userID = userID;
 			this.session = s;
+			this.ping = new Timer();
 			this.ping.scheduleAtFixedRate(new TimerTask() {
 				public void run() {
 					try {
@@ -40,4 +41,6 @@ public class User {
 		public void setSessionID(String s) { this.sessionID = s; }
 
 		public void setSession(Session s) { this.session = s; }
+
+		public void cancelPing() { this.ping.cancel(); }
 }

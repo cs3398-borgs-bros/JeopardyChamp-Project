@@ -53,8 +53,11 @@ public class GameEndpoint {
 
         ObjectMapper mapper = new ObjectMapper();
         GameMessage gamemsg = null;
+
+        System.out.println("Received message:" + message);
         try {
             gamemsg = mapper.readValue(message, GameMessage.class);
+            System.out.println("JSON converted to GameMessage");
         } catch (IOException e1) {
             System.out.println(e1.getMessage());
         }
@@ -65,9 +68,12 @@ public class GameEndpoint {
 			String msgcode = gamemsg.getMessage();
             if (rooms == null) {
                 this.rooms = new HashSet<Room>();
+                rooms.add(new Room(msgcode));
+                System.out.println("Rooms initialied, New room created with code :" + msgcode);
             } 
             else {
                 rooms.add(new Room(msgcode));
+                System.out.println("New room created with code: " + msgcode);
             }
         }
         else if (gamemsg.getMessageType() == MessageType.JOIN) {
@@ -80,7 +86,7 @@ public class GameEndpoint {
                     if (msgcode == r.getCode()) {
                         System.out.println("FOUND ROOM");
                         r.join(session);
-                        r.sendMessage(" Joined the chat room");
+                        System.out.println("User joined room " + msgcode);
                         break;
                     }
                 }

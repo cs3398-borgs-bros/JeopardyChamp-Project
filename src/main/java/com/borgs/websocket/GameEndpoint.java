@@ -15,10 +15,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.catalina.SessionEvent;
 
 /**
  * @ServerEndpoint gives the relative name for the end point
@@ -63,7 +60,6 @@ public class GameEndpoint {
         }
 
         Map<String, Object> properties = session.getUserProperties();
-        System.out.println(properties.values());
 		if (gamemsg.getMessageType() == MessageType.HOST) {
 			String msgcode = gamemsg.getMessage();
             if (rooms == null) {
@@ -78,11 +74,14 @@ public class GameEndpoint {
         }
         else if (gamemsg.getMessageType() == MessageType.JOIN) {
             String msgcode = gamemsg.getMessage();
+            System.out.println("User attempting to join room " + msgcode);
             if ( rooms == null) {
                 //TODO
+                System.out.println("rooms == null");
             }
             else {
                 for (Room r : rooms) {
+                    System.out.println("For Loop: Room " + r.getCode());
                     if (msgcode == r.getCode()) {
                         System.out.println("FOUND ROOM");
                         r.join(session);

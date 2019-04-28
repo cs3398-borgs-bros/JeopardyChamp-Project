@@ -9,6 +9,7 @@ import java.util.HashSet;
 
 import javax.websocket.EndpointConfig;
 import javax.websocket.OnClose;
+import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -37,9 +38,8 @@ public class GameEndpoint {
     @OnOpen
     public void onOpen(Session session, EndpointConfig config) {
         userCon++;
-
+        session.setMaxIdleTimeout(1000*360);
         System.out.println("Open session " + session.getId());
-
         users.add(new User("C-" + session.getId()));
 
     }
@@ -150,5 +150,10 @@ public class GameEndpoint {
         }
         System.out.println("Session " + session.getId() + " is closed.");
         
+    }
+
+    @OnError
+    public void onError(Session session) {
+
     }
 }

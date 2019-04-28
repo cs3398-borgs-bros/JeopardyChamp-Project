@@ -64,11 +64,12 @@ public class GameEndpoint {
 		if (gamemsg.getMessageType() == MessageType.HOST) {
 			String msgcode = gamemsg.getMessage();
             if (rooms.size() == 0) {
-                rooms.add(new Room(msgcode));
+                rooms.add(new Room(msgcode, session));
                 System.out.println("First room created with code :" + msgcode);
+                
             } 
             else {
-                rooms.add(new Room(msgcode));
+                rooms.add(new Room(msgcode, session));
                 System.out.println("New room created with code: " + msgcode);
             }
         }

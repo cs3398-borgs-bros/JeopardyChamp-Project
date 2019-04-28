@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 @ServerEndpoint("/game-endpoint")
 public class GameEndpoint {
-    private Set<Room> rooms;
+    private static Set<Room> rooms = new HashSet<Room>();
     private List<User> users = new ArrayList<User>();
     int userCon = 0;
 
@@ -62,10 +62,9 @@ public class GameEndpoint {
         Map<String, Object> properties = session.getUserProperties();
 		if (gamemsg.getMessageType() == MessageType.HOST) {
 			String msgcode = gamemsg.getMessage();
-            if (rooms == null) {
-                this.rooms = new HashSet<Room>();
+            if (rooms.size() == 0) {
                 rooms.add(new Room(msgcode));
-                System.out.println("Rooms initialied, New room created with code :" + msgcode);
+                System.out.println("First room created with code :" + msgcode);
             } 
             else {
                 rooms.add(new Room(msgcode));
@@ -73,22 +72,21 @@ public class GameEndpoint {
             }
         }
         else if (gamemsg.getMessageType() == MessageType.JOIN) {
-            String msgcode = gamemsg.getMessage();
-            System.out.println("User attempting to join room " + msgcode);
-            if ( rooms == null) {
-                //TODO
-                System.out.println("rooms == null");
-            }
-            else {
+            String[] msg = gamemsg.getMessage().split(":");
+            System.out.println(msg[0] + " attempting to join room " + msg[1]);
+            if ( rooms.size() > 0) {
                 for (Room r : rooms) {
                     System.out.println("For Loop: Room " + r.getCode());
-                    if (msgcode == r.getCode()) {
+                    if (msg[1] == r.getCode()) {
                         System.out.println("FOUND ROOM");
                         r.join(session);
-                        System.out.println("User joined room " + msgcode);
+                        System.out.println(msg[0] + " joined room " + msg[1]);
                         break;
                     }
                 }
+            }
+            else {
+                System.out.println("no rooms exist");
             }
         }
 

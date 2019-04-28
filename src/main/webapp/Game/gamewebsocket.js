@@ -29,7 +29,9 @@ function hostMessage() {
 
 function joinMessage() {
     if (websocket != null && websocket.readyState == 1) {
-        var input = document.getElementById("joinerID").innerHTML.toString();
+        var input = document.getElementById("joinerName").value;
+        input += ":";
+        input += document.getElementById("joinerID").value;
         //TODO need joinername
         var message = { messageType: 'JOIN', message: input };
         websocket.send(JSON.stringify(message));

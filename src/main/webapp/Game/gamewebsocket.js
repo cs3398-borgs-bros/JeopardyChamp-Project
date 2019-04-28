@@ -10,11 +10,9 @@ websocket.onopen = function () {
 websocket.onmessage = function (event) {
     console.log(event.data);
     var str = event.data.toString();
-    //testing
     if (str.startsWith("JOIN:")) {
-        str.replace('JOIN:', '');
-        document.getElementById("hlog").value += str;
-        document.getElementById("jlog").value += str;
+        document.getElementById("hlog").value += str.slice(5);
+        document.getElementById("jlog").value += str.slice(5);
     }
 };
 websocket.onerror = function(e) {   };

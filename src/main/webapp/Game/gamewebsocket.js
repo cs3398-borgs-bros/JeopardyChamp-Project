@@ -13,6 +13,7 @@ websocket.onmessage = function (event) {
 };
 websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {
+    console.log("Session closed" + event.data);
     websocket.close();
 };
 

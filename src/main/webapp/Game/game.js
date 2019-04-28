@@ -36,7 +36,7 @@ function joinStart() {
 	document.getElementById("givenID").innerHTML += str;
 
 	var tj= document.getElementById("tojoin");
-	th.style.display = "none";
+	tj.style.display = "none";
 	var j = document.getElementById("joining");
 	j.style.display = "block";
 }

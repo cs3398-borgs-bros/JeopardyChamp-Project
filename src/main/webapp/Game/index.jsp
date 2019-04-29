@@ -501,6 +501,15 @@
 	<h2 id="question"></h2>
 </div>
 
+<!-- Player Screen -->
+<div id="pprompt">
+	<h2 id="panswer"></h2>>
+	<h2 id = "pquestion"></h2>
+</div>
+
+<div id="pstats">
+</div>
+
 <!-- Main Menu -->
 <div id="mainmenu">
 	<h1><img src="https://fontmeme.com/permalink/190429/73cf41c2a34cebabe55271a20ff544a2.png" alt="jeopardy-font" border="0"></h1>

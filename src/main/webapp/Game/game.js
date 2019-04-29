@@ -285,7 +285,16 @@ menu.showMenu = function()
 menu.hostServer = function()
 {
 	$('#mainmenu').hide();
+	let code = Math.random().toString(36).substring(7);
+	document.getElementById("gameID").innerHTML = code.toUpperCase();
 	$('#hostgame').fadeIn(1000);
+}
+menu.startHosting = function()
+{
+	$('#tohost').hide();
+	var str = document.getElementById("gameID").innerHTML.toString();
+	document.getElementById("givenID").innerHTML += str;
+	$('#hosting').show();
 }
 
 menu.joinServer = function()
@@ -293,20 +302,14 @@ menu.joinServer = function()
 	$('#mainmenu').hide();
 	$('#joingame').fadeIn(1000);
 }
-menu.showOptions = function()
-{
-	$('#mainmenu').hide();
-	$('#options').fadeIn(1000);
-}
-
-menu.startHosting = function()
-{
-	$('#tohost').hide();
-	$('#hosting').show();
-}
-
 menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
+}
+
+menu.showOptions = function()
+{
+	$('#mainmenu').hide();
+	$('#options').fadeIn(1000);
 }

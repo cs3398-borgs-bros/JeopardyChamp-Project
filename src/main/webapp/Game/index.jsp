@@ -516,13 +516,13 @@
 <div id="hostgame" class="hide">
 	<h1>Host!</h1>
 	<div id ="tohost">
-		<p>Enter host name:</p>
-		<input type="text" id="gameID" maxlength="6">
-		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="menu.startHosting();getSessionId();" />
+		<h2>Room Code:</h2>
+		<h2 id="gameID"></h2>
+		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="menu.startHosting();hostMessage();" />
 	</div>
 
 	<div id ="hosting" class="hide">
-		<h2 id="givenID">Room: </h2>
+		<h2 id="givenID">Room Code: </h2>
 		<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
 		<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
 	</div>
@@ -536,9 +536,9 @@
 	<div id ="tojoin">
 			<p>Enter name:</p>
 			<input type="text" id="joinerName">
-			<p>Enter host name:</p>
+			<p>Enter Room Code:</p>
 			<input type="text" id="joinerID" maxlength="6">
-			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
+			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();joinMessage();" />
 		</div>
 	<div id ="joining" class="hide">
 		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
@@ -554,10 +554,6 @@
 		<option value="2">2 teams</option>
 		<option value="3">3 teams</option>
 		<option value="4">4 teams</option>
-		<option value="5">5 teams</option>
-		<option value="6">6 teams</option>
-		<option value="7">7 teams</option>
-		<option value="8">8 teams</option>
 	</select>
 	<input class="submit" type="button" id="saveopt" value="Save" onclick="menu.showMenu()" />
 	<p align="center">Press F11 for full-screen mode</p>

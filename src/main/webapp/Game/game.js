@@ -312,7 +312,7 @@ menu.joinError = function()
 	$('#tojoin').hide();
 	$('#joinerr').show();
 }
-menu.backToMain() = function()
+menu.backToMain = function()
 {
 	$('#joinerr').hide();
 	$('#tojoin').show();

@@ -1,3 +1,6 @@
+/*
+ *	Host's Game scripts
+ */
 var modal = {}
 modal.show = function(questionID)
 {
@@ -88,6 +91,38 @@ prompt.hide = function()
 prompt.showQuestion = function()
 {
 	$('#question').fadeIn(1000)
+}
+
+/*
+ *	Player Game scripts
+ */
+var pgame = {}
+pgame.init = function()
+{
+	//$('#pgame').fadeIn(1000);
+	$('#joingame').hide()
+	$('#pstats').show()
+	pgame.team_cnt = 2;
+	pgame.createScoreboard()
+        pgame.current_points = 0;
+}
+pgame.createScoreboard = function()
+{
+	var content = "<table cellspacing=10><tbody><tr>";
+	for(var i = 1; i <= game.team_cnt; i++)
+	{
+		content += "<th><input class='team-name' type='text' value='Team " + i + "' /></th>";
+	}
+	content += "</tr><tr>";
+	for(var i = 1; i <= game.team_cnt; i++)
+	{
+		//content += "<td><h3 id='team" + i +"'>0</h3><span class='add-points' onclick='addPoints(" + i +  ")'>+</span> <span class='remove-points' onclick='removePoints(" + i +  ")'>-</span></td>";
+		content += "<td><h3 id='team" + i +"'>0</h3></td>";
+		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
+	}
+	content += "</tr></tbody></table>";
+	$('#pstats').html(content);
+
 }
 
 //Main Menu Scripting

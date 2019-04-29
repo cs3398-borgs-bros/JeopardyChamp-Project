@@ -2,12 +2,12 @@ var url = (window.location.protocol === "https:" ? "wss:" : "ws:") + "//" + wind
 
 //set up websocket
 
-var webSocket = new WebSocket(url);
-webSocket.onopen = function () {
+var websocket = new WebSocket(url);
+websocket.onopen = function () {
     console.log("WebSocket is connected.");
     console.log(event.data);
 };
-webSocket.onmessage = function (event) {
+websocket.onmessage = function (event) {
     console.log(event.data);
     var str = event.data.toString();
     if (str.startsWith("JOIN:")) {

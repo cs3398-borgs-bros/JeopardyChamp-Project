@@ -554,12 +554,6 @@
 <!-- Options Menu -->
 <div id="options" class="hide">
 	<h1><img src="https://fontmeme.com/permalink/190429/b7b2d1346aa410dbc345db3d74a4f128.png" alt="jeopardy-font" border="0"></h1>
-	<label>Number of Teams</label>
-	<select name="teams" id="teams">
-		<option value="2">2 teams</option>
-		<option value="3">3 teams</option>
-		<option value="4">4 teams</option>
-	</select>
 	<input class="submit" type="button" id="saveopt" value="Save" onclick="menu.showMenu()" />
 	<p>Press F11 for full-screen mode</p>
 	

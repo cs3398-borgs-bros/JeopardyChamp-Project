@@ -5,7 +5,6 @@ var url = (window.location.protocol === "https:" ? "wss:" : "ws:") + "//" + wind
 var websocket = new WebSocket(url);
 websocket.onopen = function () {
     console.log("WebSocket is connected.");
-    console.log(event.data);
 };
 websocket.onmessage = function (event) {
     console.log(event.data);

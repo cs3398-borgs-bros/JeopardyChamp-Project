@@ -19,7 +19,7 @@ game.init = function()
 	$('#game').fadeIn(1000);
 	$('#hostgame').hide()
 	$('#stats').show()
-	game.team_cnt = $('#teams').val()
+	game.team_cnt = 2;
 	game.createScoreboard()
         game.current_points = 0;
 }

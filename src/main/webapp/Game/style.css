@@ -489,6 +489,35 @@ textarea#title {
 #stats table th {
 	border-bottom:1px solid black;
 }
+#pstats {
+	position:fixed;
+	bottom:0;
+	background-color:#ffffff;
+	width:100%;
+	text-align:center;
+	height:110px;
+	display:none;
+	left:0;
+}
+#pstats h3 {
+	margin:0;
+	padding:0;	
+}
+#pstats input.team-name {
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    width:100%;
+    display:block;
+}
+#pstats table {
+	margin:auto;
+}
+#pstats table th {
+	border-bottom:1px solid black;
+}
 input.add-points {
 	color:#66cc33;
 	font-family:"Courier New", Courier, monospace;
@@ -516,7 +545,7 @@ input.subtract-points {
 	height:100%;
 	width:100%;
 	font-size:46px;
-	background-color:#2a3698;
+	background-color:#ffa600;
 	color:#FFFFFF;
 	text-align:center;
 }

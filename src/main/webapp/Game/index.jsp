@@ -534,14 +534,18 @@
 <div id="joingame" class="hide">
 	<h1>Join Game</h1>
 	<div id ="tojoin">
-			<p>Enter name:</p>
-			<input type="text" id="joinerName">
-			<p>Enter Room Code:</p>
-			<input type="text" id="joinerID" maxlength="6">
-			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();joinMessage();" />
-		</div>
+		<p>Enter name:</p>
+		<input type="text" id="joinerName">
+		<p>Enter Room Code:</p>
+		<input type="text" id="joinerID" maxlength="6">
+		<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="joinMessage()" />
+	</div>
 	<div id ="joining" class="hide">
-		<textarea id="jlog" cols="45" rows="5" type="text" readonly></textarea>
+		<p>Successfully Joined!</p>		
+	</div>
+	<div id ="joinerr">
+		<p>Invalid Room Code!</p>
+		<input class="submit" type="button" id="jbacksubmit" value="Back to Main Menu" onclick="menu.backToMain()" />
 	</div>
 	<div class="clear"></div>
 </div>

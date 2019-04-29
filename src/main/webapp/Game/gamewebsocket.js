@@ -10,11 +10,16 @@ websocket.onopen = function () {
 websocket.onmessage = function (event) {
     console.log(event.data);
     var str = event.data.toString();
-    if (str.startsWith("JOIN:")) {
-        document.getElementById("hlog").value += str.slice(5);
-        document.getElementById("jlog").value += str.slice(5);
-    }
     
+    if (str.startsWith("HOST:")) {
+        document.getElementById("hlog").value += str.slice(5);
+    }
+    else if (str.startsWith("JOIN:")) {
+        menu.startJoining(); //from game.js
+    }
+    else if(str.startsWith("ERROR:")) {
+        menu.joinError(); //from game.js
+    }
 };
 websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {

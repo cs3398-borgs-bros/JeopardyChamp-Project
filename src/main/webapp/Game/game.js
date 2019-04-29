@@ -307,6 +307,18 @@ menu.startJoining = function()
 	$('#tojoin').hide();
 	$('#joining').show();
 }
+menu.joinError = function()
+{
+	$('#tojoin').hide();
+	$('#joinerr').show();
+}
+menu.backToMain() = function()
+{
+	$('#joinerr').hide();
+	$('#tojoin').show();
+	$('#joingame').hide();
+	$('#mainmenu').fadeIn(1000);
+}
 
 menu.showOptions = function()
 {

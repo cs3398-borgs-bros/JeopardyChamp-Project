@@ -39,19 +39,15 @@ public class GameEndpoint {
      * @OnMessage
      */
     @OnMessage
-    public void onMessage(String message, final Session session) {
+    public void onMessage(String message, final Session session) throws IOException {
         
         ObjectMapper mapper = new ObjectMapper();
         GameMessage gamemsg = null;
 
         //Converts message to GameMessage object
         System.out.println("Session " + session.getId() + " message: " + message);
-        try {
-            gamemsg = mapper.readValue(message, GameMessage.class);
-            System.out.println("JSON converted to GameMessage");
-        } catch (IOException e1) {
-            System.out.println(e1.getMessage());
-        }
+        gamemsg = mapper.readValue(message, GameMessage.class);
+        System.out.println("JSON converted to GameMessage");
         
         //If HOST game
 		if (gamemsg.getMessageType() == MessageType.HOST) {
@@ -67,23 +63,26 @@ public class GameEndpoint {
             properties.put("name", msg[0]);
             System.out.println(msg[0] + " attempting to join room " + msg[1]);
             if ( rooms.size() > 0) {
+                boolean found = false;
                 for (Room r : rooms) {
                     System.out.println("For Loop: Room " + r.getCode());
                     if (msg[1].equalsIgnoreCase(r.getCode())) {
-                        System.out.println("FOUND ROOM");
+                        found = true;
                         r.join(session);
                         System.out.println(msg[0] + " joined room " + msg[1]);
-                        try {
-                            r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        r.sendHostMessage("HOST:" + msg[0] + " has joined." + "\n");
+                        r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
                         break;
                     }
                 }
+
+                if (!found) {
+                    session.getBasicRemote().sendText("ERROR:" + "Room not found.");
+                }
+
             }
             else {
-                System.out.println("no rooms exist");
+                session.getBasicRemote().sendText("ERROR:" + "Room not found.");
             }
         }
         //If BROADCAST messagetype

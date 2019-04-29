@@ -33,8 +33,11 @@ public class Room {
 		sessions.remove(session); 
 	}
 
-	public synchronized void sendMessage(String message) throws IOException {
+	public synchronized void sendHostMessage(String message) throws IOException {
 		this.host.getBasicRemote().sendText(message);
+	}
+
+	public synchronized void sendMessage(String message) throws IOException {
 		for (Session session: sessions) {
 			if (session.isOpen()) {
 				session.getBasicRemote().sendText(message);

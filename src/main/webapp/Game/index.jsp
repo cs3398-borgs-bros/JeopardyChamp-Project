@@ -9,7 +9,7 @@
 <!-- Tab Title -->
 <title>Jeopardy Champs</title>
 
-<meta name="description" content="Self-contained Jeopardy template. />
+<meta name="description" content="Self-contained Jeopardy template." />
 <meta name="ROBOTS" content="NOODP" />
 
 <!-- TO BE IMPLEMENTED 
@@ -50,7 +50,7 @@
 						<div class="hide">
 							<div id="q00">
 								<button style="inline-block">Who is Tim Berners Lee?</button>
-								  <button style="inline-block">Who is James Gosling?</button>
+								<button style="inline-block">Who is James Gosling?</button>
 								<button style="inline-block">Who is Bjarne Stroustrup?</button>
 								<button style="inline-block">Who is Guido van Rossum?</button>
 							</div>
@@ -543,7 +543,7 @@
 	<div id ="joining" class="hide">
 		<p>Successfully Joined!</p>		
 	</div>
-	<div id ="joinerr">
+	<div id ="joinerr" class="hide">
 		<p>Invalid Room Code!</p>
 		<input class="submit" type="button" id="jbacksubmit" value="Back to Main Menu" onclick="menu.backToMain()" />
 	</div>
@@ -560,7 +560,7 @@
 		<option value="4">4 teams</option>
 	</select>
 	<input class="submit" type="button" id="saveopt" value="Save" onclick="menu.showMenu()" />
-	<p align="center">Press F11 for full-screen mode</p>
+	<p>Press F11 for full-screen mode</p>
 	
 	<div class="clear"></div>
 </div>

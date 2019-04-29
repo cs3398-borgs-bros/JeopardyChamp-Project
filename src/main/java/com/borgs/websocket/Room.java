@@ -9,16 +9,22 @@ import javax.websocket.Session;
 public class Room {
 	private static Room instance = null;
 	private String code = null;
+	private Session host;
 	private List<Session> sessions = new ArrayList<Session>();
 
 	public Room() {}
 
 	public Room(String c, Session s) {
 		this.code = c;
-		join(s);
+		hostJoin(s);
 	}
 
 	public String getCode() {	return code;	}	
+
+
+	public void hostJoin(Session session) {
+		this.host = session;
+	}
 
 	public synchronized void join(Session session) { 
 		sessions.add(session); 

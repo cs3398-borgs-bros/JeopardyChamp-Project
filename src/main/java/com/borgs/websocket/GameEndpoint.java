@@ -60,21 +60,21 @@ public class GameEndpoint {
             System.out.println(e1.getMessage());
         }
 
-        Map<String, Object> properties = session.getUserProperties();
+        
+        //If HOST game
 		if (gamemsg.getMessageType() == MessageType.HOST) {
-			String msgcode = gamemsg.getMessage();
-            if (rooms.size() == 0) {
-                rooms.add(new Room(msgcode, session));
-                System.out.println("First room created with code :" + msgcode);
-                
-            } 
-            else {
-                rooms.add(new Room(msgcode, session));
-                System.out.println("New room created with code: " + msgcode);
-            }
+
+            //Map<String, Object> properties = session.getUserProperties();
+            
+			String msg = gamemsg.getMessage();
+            rooms.add(new Room(msg, session));
+            System.out.println("New room created with code: " + msg);
         }
+        //If JOIN game
         else if (gamemsg.getMessageType() == MessageType.JOIN) {
             String[] msg = gamemsg.getMessage().split(":");
+            Map<String, Object> properties = session.getUserProperties();
+            properties.put("name", msg[0]);
             System.out.println(msg[0] + " attempting to join room " + msg[1]);
             if ( rooms.size() > 0) {
                 for (Room r : rooms) {

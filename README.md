@@ -21,7 +21,7 @@ Daniel: I was able to update the extensions/dependencies to later builds. Depend
 
 Luke: Able to apply modifications to the CSS. Researched on modifiying the scripts of the web application.
 
-Elvin: 
+Elvin: CSS modifications and reserch on automated testing for gui.
 
 ### Project Status/Next Step:
 Walter: My next step would be testing and implementation of multiplayer within the game.
@@ -33,7 +33,7 @@ Daniel: Fix bugs with menu and work on functionality of lobbies and multiplayer.
 
 Luke: Implement further changes to the webapp to improve functionality.
 
-Elvin: 
+Elvin: Continue to improve CSS to provide a more functional and user friendly interface. Debug script errors. Begin to implement automated regression testing.
 
 ### Retrospective
 

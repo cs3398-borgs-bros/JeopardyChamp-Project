@@ -21,7 +21,6 @@ public class Room {
 
 	public String getCode() {	return code;	}	
 
-
 	public void hostJoin(Session session) {
 		this.host = session;
 	}
@@ -34,11 +33,11 @@ public class Room {
 		sessions.remove(session); 
 	}
 
-	public synchronized void sendMessage(String message) {
+	public synchronized void sendMessage(String message) throws IOException {
+		this.host.getBasicRemote().sendText(message);
 		for (Session session: sessions) {
 			if (session.isOpen()) {
-				try { session.getBasicRemote().sendText(message); }
-				catch (IOException e) { e.printStackTrace(); }
+				session.getBasicRemote().sendText(message);
 			}
 		}
 	}

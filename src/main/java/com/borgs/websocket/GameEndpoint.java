@@ -83,7 +83,11 @@ public class GameEndpoint {
                         System.out.println("FOUND ROOM");
                         r.join(session);
                         System.out.println(msg[0] + " joined room " + msg[1]);
-                        r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
+                        try {
+                            r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         break;
                     }
                 }

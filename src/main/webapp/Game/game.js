@@ -9,7 +9,7 @@ function hostMenu() {
 function generateCode() {
 	var c = document.getElementById("gameID");
 	let code = Math.random().toString(36).substring(7);
-	c.innerHTML = code;
+	c.innerHTML = code.toUpperCase();
 }
 
 function hostStart() {

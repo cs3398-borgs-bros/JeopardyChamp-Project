@@ -297,6 +297,7 @@ textarea#title {
 }
 #mainmenu input {
 	width:100px;	
+	margin-bottom:20px;
 }
 #mainmenu p {
 	margin-bottom:0px;	
@@ -307,6 +308,7 @@ textarea#title {
 	padding:10px;
 	margin:auto;
 }
+
 #hostgame h1 {
 	color:#2a3698;
 	font-size:32px;
@@ -329,6 +331,19 @@ textarea#title {
 }
 #hostgame input {
 	width:100px;	
+	margin-bottom:20px;
+	margin-top:10px;	
+}
+#hostgame input.submit {
+	width:150px;
+	height:30px;
+	font-size:16px;
+	border-radius: 15px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: rgba(1,151,171,1);
+	border-color: rgba(0,63,71,.2);	
+	
 }
 #hostgame p {
 	margin-bottom:0px;
@@ -369,6 +384,19 @@ textarea#title {
 }
 #joingame input {
 	width:100px;	
+	margin-bottom:20px;
+	margin-top:10px;	
+}
+#joingame input.submit {
+	width:150px;
+	height:30px;
+	font-size:16px;
+	border-radius: 15px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: rgba(239,57,50,1);
+	border-color: rgba(133,32,28,.2);	
+	
 }
 #joingame p {
 	margin-bottom:0px;
@@ -406,6 +434,19 @@ textarea#title {
 }
 #options input {
 	width:100px;	
+	margin-bottom:20px;
+	margin-top:10px;	
+}
+#options input.submit {
+	width:150px;
+	height:30px;
+	font-size:16px;
+	border-radius: 15px;
+	font-family: Arial;
+	font-weight: bold;
+	background-color: rgba(252,227,1,1);
+	border-color: rgba(153,38,0,.2);	
+	
 }
 #options p {
 	margin-bottom:0px;

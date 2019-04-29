@@ -502,21 +502,23 @@
 
 <!-- Main Menu -->
 <div id="mainmenu">
-	<h1>Jeopardy Champ!</h1>
-	<input class="submit" type="button" id="hostsubmit" value="Host Lobby" onclick="menu.hostServer()" />
-	<p></p>
-	<input class="submit" type="button" id="joinsubmit" value="Join Game" onclick="menu.joinServer()" />
-	<p></p>
-	<input class="submit" type="button" id="optsubmit" value="Options" onclick="menu.showOptions()" />
+	<h1><img src="https://fontmeme.com/permalink/190429/73cf41c2a34cebabe55271a20ff544a2.png" alt="jeopardy-font" border="0"></h1>
 	
+	<ul>
+  		<li><a  class="round green" onclick="menu.hostServer()" >Host Game<span class="round">Create a new game lobby</span> </a></li>
+  		<li><a  class="round red" onclick="menu.joinServer()" >Join Game<span class="round">Join an existing game </span>  </a></li>
+		<li><a  class="round yellow" onclick="menu.showOptions()">Options<span class="round">Modify game options</span></a>  </li>
+	</ul> 
+
 	<div class="clear"></div>
 </div>
 
+
 <!-- Host  -->
 <div id="hostgame" class="hide">
-	<h1>Host!</h1>
+	<h1><img src="https://fontmeme.com/permalink/190429/064cfd4346b7073442d822b1b422809a.png" alt="jeopardy-font" border="0"></h1>
 	<div id ="tohost">
-		<p>Enter host name:</p>
+		<p>Enter Host Name:</p>
 		<input type="text" id="gameID" maxlength="6">
 		<input class="submit" type="button" id="ssubmit" value="Host Session" onclick="menu.startHosting();getSessionId();" />
 	</div>
@@ -532,11 +534,11 @@
 
 <!-- Client  -->
 <div id="joingame" class="hide">
-	<h1>Join Game</h1>
+	<h1><img src="https://fontmeme.com/permalink/190429/e2d1762c1c196ecc738d11895babdae8.png" alt="jeopardy-font" border="0"></h1>
 	<div id ="tojoin">
-			<p>Enter name:</p>
+			<p>Enter Player Name:</p>
 			<input type="text" id="joinerName">
-			<p>Enter host name:</p>
+			<p>Enter Host Name:</p>
 			<input type="text" id="joinerID" maxlength="6">
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="menu.startJoining();getClientId();" />
 		</div>
@@ -548,7 +550,7 @@
 
 <!-- Options Menu -->
 <div id="options" class="hide">
-	<h1>Options</h1>
+	<h1><img src="https://fontmeme.com/permalink/190429/b7b2d1346aa410dbc345db3d74a4f128.png" alt="jeopardy-font" border="0"></h1>
 	<label>Number of Teams</label>
 	<select name="teams" id="teams">
 		<option value="2">2 teams</option>

@@ -24,6 +24,7 @@ websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {
     console.log("Session closed, " + event.data);
     websocket.close();
+    alert("Connection lost.");
 };
 
 
@@ -58,7 +59,7 @@ function joinMessage() {
 function teamSelectMessage(teamX) {
     if (websocket != null && websocket.readyState == 1) {
         if (teamX == "Team1") {
-            
+
         }
         else if (teamX == "Team2") {
 

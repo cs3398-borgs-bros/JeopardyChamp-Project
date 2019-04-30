@@ -11,6 +11,8 @@ public class Room {
 	private String code = null;
 	private Session host;
 	private List<Session> sessions = new ArrayList<Session>();
+	private List<Session> team1 = new ArrayList<Session>();
+	private List<Session> team2 = new ArrayList<Session>();
 
 	public Room() {}
 
@@ -31,6 +33,14 @@ public class Room {
 		sessions.add(session); 
 	}
 
+	public synchronized void joinTeam1(Session session) throws IOException {
+		team1.add(session); 
+	}
+
+	public synchronized void joinTeam2(Session session) throws IOException {
+		team2.add(session);
+	}
+
 	public synchronized void leave(Session session) { 
 		sessions.remove(session); 
 	}
@@ -45,6 +55,14 @@ public class Room {
 				session.getBasicRemote().sendText(message);
 			}
 		}
+	}
+
+	public synchronized void sendTeam1(String message) throws IOException {
+
+	}
+
+	public synchronized void sendTeam2(String message) throws IOException {
+
 	}
 	
 	public synchronized static Room getRoom() {

@@ -23,6 +23,7 @@ game.init = function()
 	$('#hostgame').hide()
 	$('#stats').show()
 	game.team_cnt = 2;
+	game.team_up = 1;
 	game.createScoreboard()
         game.current_points = 0;
 }
@@ -40,9 +41,23 @@ game.createScoreboard = function()
 		content += "<td><h3 id='team" + i +"'>0</h3></td>";
 		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
 	}
-	content += "</tr></tbody></table>";
+	content += "</tr></tbody>";
+	content += "<input class='submit' type='button' id='toggturn' value='Team 1 is up' onclick='game.teamTurn' />"
+	content += "</table>";
 	$('#stats').html(content);
 
+}
+
+game.teamTurn = function() 
+{
+	if (game.team_up == 1)	{
+		game.team_up = 2;
+		document.getElementById("toggturn").innerHTML = "Team 2 is up!";
+	}
+	else {
+		game.team_up = 1;
+		document.getElementById("toggturn").innerHTML = "Team 1 is up!";
+	}
 }
 
 game.addPoints = function(team)

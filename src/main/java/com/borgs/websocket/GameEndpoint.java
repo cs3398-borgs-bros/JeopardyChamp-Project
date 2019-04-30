@@ -101,7 +101,12 @@ public class GameEndpoint {
                     for (Room r : rooms) { 
                         if (u.getRoomJoined().equalsIgnoreCase(r.getCode())) {
                             System.out.println("Found room");
-                            //TODO join team
+                            if(msg.equals("1")) {
+                                r.joinTeam1(u.getSession());
+                            }
+                            else if(msg.equals("2")) {
+                                r.joinTeam2(u.getSession());
+                            }
                             r.sendHostMessage("TEAM:" + msg + ":" +u.getName());
                             break;
                         }

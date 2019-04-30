@@ -70,7 +70,7 @@ public class GameEndpoint {
                         r.join(session);
                         for (User u : users)
                         {
-                            if (u.getSession() == session) {
+                            if (u.getSession().getId() == session.getId()) {
                                 u.setName(msg[0]);
                                 u.setRoomJoined(msg[1]);
                                 break;
@@ -94,12 +94,13 @@ public class GameEndpoint {
         }
         //If TEAM messagetype
         else if(gamemsg.getMessageType() == MessageType.TEAM) {
-            System.out.println("TESTSTESTETSETSETSETSTST");
             String msg = gamemsg.getMessage();
             for (User u : users) {
-                if (u.getSession() == session) {
+                if (u.getSession().getId() == session.getId()) {
+                    System.out.println("Found session");
                     for (Room r : rooms) { 
                         if (u.getRoomJoined() == r.getCode()) {
+                            System.out.println("Found room");
                             //TODO join team
                             r.sendHostMessage("HOST:" + u.getName() + " has joined Team" + msg + "\n");
                             break;

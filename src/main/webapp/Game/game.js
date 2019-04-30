@@ -159,12 +159,12 @@ menu.startJoining = function()
 	$('#tojoin').hide();
 	$('#joining').show();
 }
-continueTeam = function() 
+menu.continueTeam = function() 
 {
 	$('#jsuccess').hide();
 	$('#teamselect').fadeIn(1000);
 }
-teamSelected = function() 
+menu.teamSelected = function() 
 {
 	$('#teamselect').hide();
 	$('#jwait').show();

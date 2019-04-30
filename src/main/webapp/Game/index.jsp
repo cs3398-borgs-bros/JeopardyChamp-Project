@@ -505,11 +505,11 @@
 		<div id="joining" class="hide">
 			<div id="jsuccess" >
 				<p>Successfully Joined!</p> 
-				<input class="submit" type="button" id="contTeam" value="Continue!" onclick="continueTeam()" />
+				<input class="submit" type="button" id="contTeam" value="Continue!" onclick="menu.continueTeam()" />
 			</div>
 			<div id="teamselect" class="hide">
-				<li><a class="round red" onclick="teamSelectMessage('Team1'); teamSelected();">Team 1<span class="round">Join Team 1!</span></a></li>
-				<li><a class="round blue" onclick="teamSelectMessage('Team2'); teamSelected();">Team 2<span class="round">Join Team 2!</span></a></li>
+				<li><a class="round red" onclick="teamSelectMessage('Team1'); menu.teamSelected();">Team 1<span class="round">Join Team 1!</span></a></li>
+				<li><a class="round blue" onclick="teamSelectMessage('Team2'); menu.teamSelected();">Team 2<span class="round">Join Team 2!</span></a></li>
 			</div>
 			<div id="jwait" class="hide"> <div class="loader"></div> <h2>Please wait...</h2></div>
 		</div>

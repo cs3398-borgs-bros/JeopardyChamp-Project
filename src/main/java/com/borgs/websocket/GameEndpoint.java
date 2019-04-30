@@ -125,8 +125,15 @@ public class GameEndpoint {
                         r.sendMessage("START");
                     }
                 }   
+            } 
+            else {
+                for (Room r : rooms) { 
+                    if (session.getId() == r.getHost().getId()){
+                        System.out.println("Host found room, starting game");
+                        r.sendMessage("QUESTIONS:" + msg );
+                    }
+                } 
             }
-            //else if();   
         }
 
 

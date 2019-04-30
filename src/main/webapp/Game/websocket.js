@@ -19,6 +19,17 @@ websocket.onmessage = function (event) {
     else if(str.startsWith("ERROR:")) {
         menu.joinError(); //from game.js
     }
+    else if(str.startsWith("TEAM")) {
+        if (str.includes(":1:")) {
+            var nam = str.slice(7);
+            document.getElementById("tm1").innerHTML += "<li>" + nam + "</li>";
+        }
+        else if(str.includes(":2:")) {
+            var nam = str.slice(7);
+            document.getElementById("tm2").innerHTML += "<li>" + nam + "</li>";
+        }
+        
+    }
 };
 websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {

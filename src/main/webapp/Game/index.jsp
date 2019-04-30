@@ -485,6 +485,16 @@
 		<div id="hosting" class="hide">
 			<h2 id="givenID">Room Code: </h2>
 			<textarea id="hlog" cols="45" rows="5" type="text" readonly></textarea>
+			<table>
+					<tr>
+					  <th>Team 1</th>
+					  <th>Team 2</th>
+					</tr>
+					<tr>
+					  <td><ul id ="tm1"></ul></td>
+					  <td><ul id ="tm2"></ul></td>
+					</tr>
+				  </table>
 			<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
 		</div>
 

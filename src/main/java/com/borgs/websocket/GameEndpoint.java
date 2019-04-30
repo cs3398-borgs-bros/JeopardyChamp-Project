@@ -102,7 +102,7 @@ public class GameEndpoint {
                         if (u.getRoomJoined().equalsIgnoreCase(r.getCode())) {
                             System.out.println("Found room");
                             //TODO join team
-                            r.sendHostMessage("HOST:" + u.getName() + " has joined Team" + msg + "\n");
+                            r.sendHostMessage("TEAM:" + msg + ":" +u.getName());
                             break;
                         }
                     }

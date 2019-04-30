@@ -503,7 +503,7 @@
 			<input class="submit" type="button" id="jsubmit" value="Join Session" onclick="joinMessage()" />
 		</div>
 		<div id="joining" class="hide">
-			<div id="jsuccess" class="hide">
+			<div id="jsuccess" >
 				<p>Successfully Joined!</p> 
 				<input class="submit" type="button" id="contTeam" value="Continue!" onclick="continueTeam()" />
 			</div>

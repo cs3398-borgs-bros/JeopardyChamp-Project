@@ -59,10 +59,14 @@ function joinMessage() {
 function teamSelectMessage(teamX) {
     if (websocket != null && websocket.readyState == 1) {
         if (teamX == "Team1") {
-
+            var input = "1";
+            var message = { messageType: 'TEAM', message: input };
+            websocket.send(JSON.stringify(message));
         }
         else if (teamX == "Team2") {
-
+            var input = "2";
+            var message = { messageType: 'TEAM', message: input };
+            websocket.send(JSON.stringify(message));
         }
     }
 } 

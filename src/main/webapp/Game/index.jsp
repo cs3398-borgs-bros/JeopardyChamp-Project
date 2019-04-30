@@ -50,9 +50,6 @@
 					<div class="hide">
 						<div id="q00">
 							<button style="inline-block">Who is Tim Berners Lee?</button>
-							<button style="inline-block">Who is James Gosling?</button>
-							<button style="inline-block">Who is Bjarne Stroustrup?</button>
-							<button style="inline-block">Who is Guido van Rossum?</button>
 						</div>
 						<div id="aq00">
 							The inventor of the World Wide Web.
@@ -64,10 +61,7 @@
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q01">
-							<button style="inline-block">What is the Single responsibility principle?</button>
-							<button style="inline-block">What is Interface segregation?</button>
 							<button style="inline-block">What is� Liskov substituion?</button>
-							<button style="inline-block">What is Let the user access everything?</button>
 						</div>
 						<div id="aq01">
 							The "L" in SOLID Principles.
@@ -79,11 +73,7 @@
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q02">
-							<button style="inline-block">What is non-volatile memory?</button>
 							<button style="inline-block">What is volatile memory?</button>
-							<button style="inline-block">What is HDD?</button>
-							<button style="inline-block">What is SDD?</button>
-						</div>
 						<div id="aq02">
 							Memory lost when a computer is turned off.
 						</div>
@@ -94,9 +84,6 @@
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q03">
-							<button style="inline-block">What is Bark?</button>
-							<button style="inline-block">What is Pine?</button>
-							<button style="inline-block">What is Leaf?</button>
 							<button style="inline-block">What is Oak?</button>
 						</div>
 						<div id="aq03">
@@ -110,9 +97,6 @@
 					<div class="hide">
 						<div id="q04">
 							<button style="inline-block">What is a kernel?</button>
-							<button style="inline-block">What is the bus?</button>
-							<button style="inline-block">What is a device driver?</button>
-							<button style="inline-block">What is a GUI?</button>
 						</div>
 						<div id="aq04">
 							The central part of an operating system.
@@ -126,10 +110,9 @@
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q10">
-							<button style="inline-block">Who is Watts Humphrey?</button>
-							<button style="inline-block">Who is William Petrie?</button>
+
 							<button style="inline-block">Who is Alan Turing?</button>
-							<button style="inline-block">Who is Grady Booch?</button>
+
 						</div>
 						<div id="aq10">
 							The father of Modern Computer Science.
@@ -141,10 +124,10 @@
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q11">
-							<button style="inline-block">What is Aerospce Engineering?</button>
+							
 							<button style="inline-block">What is Software Engineering?</button>
-							<button style="inline-block">What is Mechanical Engineering?</button>
-							<button style="inline-block">What is Civil Engineering?</button>
+							
+							
 						</div>
 						<div id="aq11">
 							The application of engineering to the development of software in a systematic method.�
@@ -156,9 +139,7 @@
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q12">
-							<button style="inline-block">What is cloud storage? </button>
-							<button style="inline-block">What is a hard disk drive?</button>
-							<button style="inline-block">What is RAM?</button>
+
 							<button style="inline-block">What is a solid state drive?</button>
 						</div>
 						<div id="aq12">
@@ -172,9 +153,7 @@
 					<div class="hide">
 						<div id="q13">
 							<button style="inline-block">How many is 4?</button>
-							<button style="inline-block">How many is 10?</button>
-							<button style="inline-block">How many is 50?</button>
-							<button style="inline-block">How many is 1?</button>
+		
 						</div>
 						<div id="aq13">
 							The number of Java platforms.
@@ -186,10 +165,8 @@
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q14">
-							<button style="inline-block">What is multitasking?</button>
-							<button style="inline-block">What is a function?</button>
 							<button style="inline-block">What is multithreading?</button>
-							<button style="inline-block">What is multiprogramming?</button>
+							
 						</div>
 						<div id="aq14">
 							Running more than one process in a program.
@@ -203,10 +180,9 @@
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q20">
-							<button style="inline-block">What is C++?</button>
+	
 							<button style="inline-block">What is Fortran?</button>
-							<button style="inline-block">What is Java?</button>
-							<button style="inline-block">What is C?</button>
+							
 						</div>
 						<div id="aq20">
 							The first ever commercially available language.
@@ -218,9 +194,8 @@
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q21">
-							<button style="inline-block">What is a user issue? </button>
-							<button style="inline-block">What is an epic?</button>
-							<button style="inline-block">What is a task?</button>
+	
+							
 							<button style="inline-block">What is a sprint?</button>
 						</div>
 						<div id="aq21">
@@ -234,10 +209,9 @@
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q22">
-							<button style="inline-block">What is the graphics card?</button>
-							<button style="inline-block">What is a power supply?</button>
+							
 							<button style="inline-block">What is a motherboard?</button>
-							<button style="inline-block">What is the hard drive enclosure?</button>
+							
 						</div>
 						<div id="aq22">
 							Device that houses the RAM and CPU
@@ -249,9 +223,6 @@
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q23">
-							<button style="inline-block">Who is Tim Cook, Apple?</button>
-							<button style="inline-block">Who is Satya Nadella, Microsoft?</button>
-							<button style="inline-block">Who is Sundar Pichai, Google?</button>
 							<button style="inline-block">Who is James Gosling, Oracle?</button>
 						</div>
 						<div id="aq23">
@@ -265,9 +236,7 @@
 					<div class="hide">
 						<div id="q24">
 							<button style="inline-block">What is Linux?</button>
-							<button style="inline-block">What is OpenBSD?</button>
-							<button style="inline-block">What is FreeBSD?</button>
-							<button style="inline-block">What is Qubes OS?</button>
+
 						</div>
 						<div id="aq24">
 							Most popular open-source OS
@@ -281,9 +250,6 @@
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q30">
-							<button style="inline-block">What is IBM701? </button>
-							<button style="inline-block">What is the IBM PC?</button>
-							<button style="inline-block">What is the Z1?</button>
 							<button style="inline-block">What is the UNIVAC I?</button>
 						</div>
 						<div id="aq30">
@@ -296,10 +262,9 @@
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q31">
-							<button style="inline-block">What is adapter pattern?</button>
+							
 							<button style="inline-block">What is a decorator pattern?</button>
-							<button style="inline-block">What is composite pattern?</button>
-							<button style="inline-block">What is facade pattern?</button>
+							
 						</div>
 						<div id="aq31">
 							A design pattern that allows behavior to be added to an individual object, dynamically,
@@ -313,9 +278,7 @@
 					<div class="hide">
 						<div id="q32">
 							<button style="inline-block">What is the ALU?</button>
-							<button style="inline-block">What is the CPU?</button>
-							<button style="inline-block">What is the GPU?</button>
-							<button style="inline-block">What is the bus?</button>
+							
 						</div>
 						<div id="aq32">
 							Part of CPU responsible for arithmetic and logic operations.
@@ -327,10 +290,9 @@
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q33">
-							<button style="inline-block">What is a embedded server?</button>
+							
 							<button style="inline-block">What is a Java applet?</button>
-							<button style="inline-block">What is a embedded system?</button>
-							<button style="inline-block">What is java point?</button>
+							
 						</div>
 						<div id="aq33">
 							Java embedded in a small web applicaton.
@@ -343,9 +305,7 @@
 					<div class="hide">
 						<div id="q34">
 							<button style="inline-block">What is a single processor system?</button>
-							<button style="inline-block">What is a mega system?</button>
-							<button style="inline-block">What is a multiprocessor system?</button>
-							<button style="inline-block">What is multicore system?</button>
+	
 						</div>
 						<div id="aq34">
 							System with more than one processor
@@ -360,9 +320,6 @@
 					<div class="hide">
 						<div id="q40">
 							<button style="inline-block">Who is Charles Babbage?</button>
-							<button style="inline-block">Who is Alan Turing?</button>
-							<button style="inline-block">Who is Nikola Tesla?</button>
-							<button style="inline-block">Who is Lord Byron?</button>
 						</div>
 						<div id="aq40">
 							Creator the first mechanical computer ever, known as the difference engine?
@@ -374,10 +331,9 @@
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q41">
-							<button style="inline-block">Who is Dr. Guowei Yang?</button>
-							<button style="inline-block">Who is Dr. Rodion Podorozhny?</button>
+							
 							<button style="inline-block">Who is Dr. Ted Lehr?</button>
-							<button style="inline-block">Who is Dr. Lee-Song Koh?</button>
+							
 						</div>
 						<div id="aq41">
 							The best software engineering teacher.
@@ -389,9 +345,6 @@
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q42">
-							<button style="inline-block">What is a graphics processor?</button>
-							<button style="inline-block">What is a single processor?</button>
-							<button style="inline-block">What is a multicore processor?</button>
 							<button style="inline-block">What is a microprocessor?</button>
 						</div>
 						<div id="aq42">
@@ -405,10 +358,9 @@
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q43">
-							<button style="inline-block">What is compile time polymorphism?</button>
+							
 							<button style="inline-block">What is runtime polymorphism?</button>
-							<button style="inline-block">What is a override?</button>
-							<button style="inline-block">What is a error?</button>
+							
 						</div>
 						<div id="aq43">
 							A process in which a call to an overridden method is resolved at runtime rather than at
@@ -421,10 +373,8 @@
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q44">
-							<button style="inline-block">What is CMD?</button>
-							<button style="inline-block">What is GUI?</button>
-							<button style="inline-block">What is an application?</button>
-							<button style="inline-block">What is an website?</button>
+							What is GUI?</button>
+							<button style="inline-block">
 						</div>
 						<div id="aq44">
 							System that uses buttons and icons rather than a command line.

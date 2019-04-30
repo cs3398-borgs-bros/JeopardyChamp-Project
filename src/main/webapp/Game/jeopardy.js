@@ -42,7 +42,7 @@ game.createScoreboard = function()
 		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
 	}
 	content += "</tr></tbody>";
-	content += "<input class='submit' type='button' id='toggturn' value='Team 1 is up' onclick='game.teamTurn' />"
+	content += "<input class='submit' type='button' id='toggturn' value='Team 1 is up' onclick='game.teamTurn()' />"
 	content += "</table>";
 	$('#stats').html(content);
 

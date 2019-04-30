@@ -158,7 +158,8 @@ menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
-	$('#jsuccess').show();
+	document.getElementById("jsuccess").style.display = "block";
+	//$('#jsuccess').show();
 	var t = function() { 
 		document.getElementById("jsuccess").className = "hide";
 		document.getElementById("jsuccess").className = "show";

@@ -161,7 +161,7 @@ menu.startJoining = function()
 	setTimeout( function() { 
 		$('#jsuccess').fadeOut(1000);
 		$('#teamselect').fadeIn(1000);
- 	}, 3000);
+ 	}, 2000);
 }
 menu.teamSelected = function() 
 {

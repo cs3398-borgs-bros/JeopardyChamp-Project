@@ -10,7 +10,7 @@ public class User {
 
 		private final String userID;
 		private String userName;
-		private String sessionID;
+		private String roomJoined;
 		private Session session;
 		private Timer ping;
 		
@@ -34,11 +34,13 @@ public class User {
 
 		public String getName() { return userName; }
 
-		public String getSessionID() { return sessionID; }
+		public String getRoomJoined() { return roomJoined; }
 
 		public Session getSession() { return session; }
 
-		public void setSessionID(String s) { this.sessionID = s; }
+		public void setRoomJoined(String r) { this.roomJoined = r; }
+
+		public void setName(String n) { this.userName = n; }
 
 		public void setSession(Session s) { this.session = s; }
 

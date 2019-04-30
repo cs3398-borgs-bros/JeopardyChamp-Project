@@ -51,7 +51,6 @@ public class GameEndpoint {
         
         //If HOST game
 		if (gamemsg.getMessageType() == MessageType.HOST) {
-            //Map<String, Object> properties = session.getUserProperties();
 			String msg = gamemsg.getMessage();
             rooms.add(new Room(msg, session));
             System.out.println("New room created with code: " + msg);
@@ -69,6 +68,14 @@ public class GameEndpoint {
                     if (msg[1].equalsIgnoreCase(r.getCode())) {
                         found = true;
                         r.join(session);
+                        for (User u : users)
+                        {
+                            if (u.getSession() == session) {
+                                u.setName(msg[0]);
+                                u.setRoomJoined(msg[1]);
+                                break;
+                            }
+                        }
                         System.out.println(msg[0] + " joined room " + msg[1]);
                         r.sendHostMessage("HOST:" + msg[0] + " has joined." + "\n");
                         r.sendMessage("JOIN:" + msg[0] + " has joined." + "\n");
@@ -85,9 +92,21 @@ public class GameEndpoint {
                 session.getBasicRemote().sendText("ERROR:" + "Room not found.");
             }
         }
-        //If BROADCAST messagetype
-        else if(gamemsg.getMessageType() == MessageType.BROADCAST) {
-
+        //If TEAM messagetype
+        else if(gamemsg.getMessageType() == MessageType.TEAM) {
+            String msg = gamemsg.getMessage();
+            for (User u : users) {
+                if (u.getSession() == session) {
+                    for (Room r : rooms) { 
+                        if (u.getRoomJoined() == r.getCode()) {
+                            //TODO join team
+                            r.sendHostMessage("HOST:" + u.getName() + " has joined Team" + msg + "\n");
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
         }
         
     }

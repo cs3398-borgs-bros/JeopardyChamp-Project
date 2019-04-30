@@ -158,7 +158,6 @@ menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
-	$('#jsuccess').show();
 }
 continueTeam = function() 
 {

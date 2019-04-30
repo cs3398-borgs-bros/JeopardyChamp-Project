@@ -61,6 +61,16 @@ function startGame() {
     }
 }
 
+function sendQuestionOptions() {
+    if (websocket != null && websocket.readyState == 1) {
+        //TODO
+    }
+}
+
+
+
+
+
 /**
  * PLAYER Message to server functions
  */
@@ -91,3 +101,9 @@ function teamSelectMessage(teamX) {
         }
     }
 } 
+
+function sendAnswerVote() {
+    if (websocket != null && websocket.readyState == 1) {
+        //TODO
+    }
+}

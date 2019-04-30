@@ -58,11 +58,19 @@ public class Room {
 	}
 
 	public synchronized void sendTeam1(String message) throws IOException {
-
+		for (Session session: team1) {
+			if (session.isOpen()) {
+				session.getBasicRemote().sendText(message);
+			}
+		}
 	}
 
 	public synchronized void sendTeam2(String message) throws IOException {
-
+		for (Session session: team2) {
+			if (session.isOpen()) {
+				session.getBasicRemote().sendText(message);
+			}
+		}
 	}
 	
 	public synchronized static Room getRoom() {

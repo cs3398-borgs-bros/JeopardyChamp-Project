@@ -42,7 +42,7 @@ game.createScoreboard = function()
 		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
 	}
 	content += "</tr></tbody>";
-	content += "<input class='submit' type='button' id='toggturn' value='Team 1 is up' onclick='game.teamTurn()' />"
+	content += "<input class='submit' type='button' id='toggturn' value='Go Team 1' onclick='game.teamTurn()' />"
 	content += "</table>";
 	$('#stats').html(content);
 
@@ -52,11 +52,11 @@ game.teamTurn = function()
 {
 	if (game.team_up == 1)	{
 		game.team_up = 2;
-		document.getElementById("toggturn").innerHTML = "Team 2 is up!";
+		document.getElementById("toggturn").value = "Go Team " + game.team_up.toString();;
 	}
 	else {
 		game.team_up = 1;
-		document.getElementById("toggturn").innerHTML = "Team 1 is up!";
+		document.getElementById("toggturn").value = "Go Team " + game.team_up.toString();;
 	}
 }
 

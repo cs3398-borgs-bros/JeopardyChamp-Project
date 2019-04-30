@@ -10,7 +10,7 @@ Currently, the project can currently be run/built. However, the current project 
 
 [Jeopardy Champ!](https://jeopardy-champ.herokuapp.com/)
 
-## Sprint 2 Review and Retrospective - 4/9/19
+## Sprint 3 Review and Retrospective - 4/30/19
 
 ### Feature/Accomplishment:
 Walter:  I created the question bank for each statment. This can be found under JeopardyChamp-Project/docs/Question bank or at [Question bank.xlsx](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/docs/Question%20bank.xlsx), these questions can be seen in the game in the form of buttons for the user to click on. The implementation of these buttons with the question can be seen under JeopardyChamp-Project/src/main/webapp/Game/index.jsp or at [index.jsp](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/index.jsp)
@@ -37,5 +37,5 @@ Elvin:
 
 ### Retrospective
 
-[Sprint 2 - Retrospective](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/docs/Borgs_Retrospective%20-%20Sprint%202.pptx)
+[Sprint 3 - Retrospective]()
 

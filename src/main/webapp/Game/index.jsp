@@ -17,7 +17,7 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
 
 	<!-- Reference to style sheet and JavaScript -->
-	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="styles.css" rel="stylesheet" type="text/css">
 	<script src="plugins.js" type="text/javascript"> </script>
 	<script src="jeopardy.js" type="text/javascript"> </script>
 	<script src="websocket.js" type="text/javascript"> </script>

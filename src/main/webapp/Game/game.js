@@ -158,10 +158,12 @@ menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
-	setTimeout( function() { 
-		$('#jsuccess').fadeOut(1000);
+	$('#jsuccess').show();
+	var t = function() { 
+		$('#jsuccess').hide();
 		$('#teamselect').fadeIn(1000);
- 	}, 2000);
+ 	}
+	setTimeout( t, 2000);
 }
 menu.teamSelected = function() 
 {

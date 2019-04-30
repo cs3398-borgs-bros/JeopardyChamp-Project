@@ -29,6 +29,9 @@ websocket.onmessage = function (event) {
             document.getElementById("tm2").innerHTML += "<li>" + nam + "</li>";
         }
     }
+    else if(str.startsWith("START")) {
+        pgame.init();
+    }
 };
 websocket.onerror = function(e) {   };
 websocket.onclose = function(e) {

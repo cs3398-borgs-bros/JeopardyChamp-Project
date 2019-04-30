@@ -109,19 +109,18 @@ pgame.init = function()
 pgame.createScoreboard = function()
 {
 	var content = "<table cellspacing=10><tbody><tr>";
-	for(var i = 1; i <= game.team_cnt; i++)
+	for(var i = 1; i <= pgame.team_cnt; i++)
 	{
 		content += "<th><input class='team-name' type='text' value='Team " + i + "' /></th>";
 	}
 	content += "</tr><tr>";
-	for(var i = 1; i <= game.team_cnt; i++)
+	for(var i = 1; i <= pgame.team_cnt; i++)
 	{
 		content += "<td><h3 id='team" + i +"'>0</h3></td>";
 		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
 	}
 	content += "</tr></tbody></table>";
 	$('#pstats').html(content);
-
 }
 
 /*

@@ -447,8 +447,9 @@
 	</div>
 
 	<!-- Player Screen -->
+	
 	<div id="pprompt">
-		<h2 id="panswer"></h2>>
+		<h2 id="panswer"></h2>
 		<h2 id="pquestion"></h2>
 	</div>
 
@@ -501,7 +502,7 @@
 		<div class="clear"></div>
 	</div>
 
-	<!-- Client  -->
+	<!-- Join  -->
 	<div id="joingame" class="hide">
 		<h1><img src="https://fontmeme.com/permalink/190429/e2d1762c1c196ecc738d11895babdae8.png" alt="jeopardy-font"
 				border="0"></h1>

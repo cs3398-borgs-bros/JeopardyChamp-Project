@@ -158,15 +158,12 @@ menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
-	document.getElementById("jsuccess").style.display = "block";
-	//$('#jsuccess').show();
-	var t = function() { 
-		document.getElementById("jsuccess").className = "hide";
-		document.getElementById("jsuccess").className = "show";
-		//$('#jsuccess').fadeOut(1000);
-		//$('#teamselect').fadeIn(1000);
-	 }
-	setTimeout( t, 2000);
+	$('#jsuccess').show();
+}
+menu.continueTeams = function() 
+{
+	$('#jsuccess').hide();
+	$('#teamselect').fadeIn(1000);
 }
 menu.teamSelected = function() 
 {

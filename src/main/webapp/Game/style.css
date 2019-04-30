@@ -356,11 +356,11 @@ textarea#title {
 }
 #hostgame table {
 	border-collapse: collapse;
-	width: 80%;
-	background-color: rgb(191, 230, 53);
+	width: 100%;
+	background-color: rgb(255, 255, 255);
 	font-family: Arial;
 	font-weight: bold;
-	color:#ffffff;
+	color:#000000;
 }
 #hostgame ul {
 	color:#2c42ec;

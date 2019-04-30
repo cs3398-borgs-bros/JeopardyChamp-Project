@@ -94,6 +94,7 @@ public class GameEndpoint {
         }
         //If TEAM messagetype
         else if(gamemsg.getMessageType() == MessageType.TEAM) {
+            System.out.println("TESTSTESTETSETSETSETSTST");
             String msg = gamemsg.getMessage();
             for (User u : users) {
                 if (u.getSession() == session) {

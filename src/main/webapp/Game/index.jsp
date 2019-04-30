@@ -45,7 +45,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td id="tq00" class="cell clean" onclick="prompt.show('q00', 100)">
+				<td id="tq00" class="cell clean" onclick="prompt.show('q00', 100);sendQuestionOptions('q00')">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q00">

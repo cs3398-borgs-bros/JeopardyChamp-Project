@@ -160,12 +160,12 @@ menu.startJoining = function()
 	$('#joining').show();
 	$('#jsuccess').show();
 }
-menu.continueTeams = function() 
+continueTeam = function() 
 {
 	$('#jsuccess').hide();
 	$('#teamselect').fadeIn(1000);
 }
-menu.teamSelected = function() 
+teamSelected = function() 
 {
 	$('#teamselect').hide();
 	$('#jwait').show();

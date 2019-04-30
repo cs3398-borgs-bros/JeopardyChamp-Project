@@ -28,7 +28,7 @@ websocket.onclose = function(e) {
 
 
 /**
- * Message to server functions
+ * HOST Message to server functions
  */
 
 function hostMessage() {
@@ -39,12 +39,29 @@ function hostMessage() {
     }
 }
 
+/**
+ * PLAYER Message to server functions
+ */
 function joinMessage() {
-    if (websocket != null && websocket.readyState == 1) {
-        var input = document.getElementById("joinerName").value;
-        input += ":";
-        input += document.getElementById("joinerID").value;
-        var message = { messageType: 'JOIN', message: input };
-        websocket.send(JSON.stringify(message));
+    var jname = document.getElementById("joinerName");
+    if(jname && jname.value) {
+        if (websocket != null && websocket.readyState == 1) {
+            var input = jname.value;
+            input += ":";
+            input += document.getElementById("joinerID").value;
+            var message = { messageType: 'JOIN', message: input };
+            websocket.send(JSON.stringify(message));
+        }
     }
 }
+
+function teamSelectMessage(teamX) {
+    if (websocket != null && websocket.readyState == 1) {
+        if (teamX == "Team1") {
+            
+        }
+        else if (teamX == "Team2") {
+
+        }
+    }
+} 

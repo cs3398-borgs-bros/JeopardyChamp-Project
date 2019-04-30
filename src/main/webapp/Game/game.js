@@ -116,7 +116,6 @@ pgame.createScoreboard = function()
 	content += "</tr><tr>";
 	for(var i = 1; i <= game.team_cnt; i++)
 	{
-		//content += "<td><h3 id='team" + i +"'>0</h3><span class='add-points' onclick='addPoints(" + i +  ")'>+</span> <span class='remove-points' onclick='removePoints(" + i +  ")'>-</span></td>";
 		content += "<td><h3 id='team" + i +"'>0</h3></td>";
 		//<input class='add-points' onclick='game.addPoints(" + i +  ")' value='+' type='button' /> <input class='subtract-points' onclick='game.subtractPoints(" + i +  ")' type='button' value='-' /></td>";
 	}
@@ -125,7 +124,9 @@ pgame.createScoreboard = function()
 
 }
 
-//Main Menu Scripting
+/*
+ *	Main Menu Scripting
+ */
 var menu = {}
 menu.showMenu = function()
 {
@@ -157,7 +158,17 @@ menu.startJoining = function()
 {
 	$('#tojoin').hide();
 	$('#joining').show();
+	setTimeout( function() { 
+		$('#jsuccess').fadeOut(1000);
+		$('#teamselect').fadeIn(1000);
+ 	}, 3000);
 }
+menu.teamSelected = function() 
+{
+	$('#teamselect').hide();
+	$('#jwait').show();
+}
+
 menu.joinError = function()
 {
 	$('#tojoin').hide();

@@ -45,7 +45,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td id="tq00" class="cell clean" onclick="prompt.show('q00', 100);sendQuestionOptions('q00')">
+				<td id="tq00" class="cell clean" onclick="prompt.show('q00', 100);sendQuestionOptions('q00');">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q00">
@@ -57,7 +57,7 @@
 					</div>
 				</td>
 
-				<td id="tq01" class="cell clean" onclick="prompt.show('q01', 100)sendQuestionOptions('q01')">
+				<td id="tq01" class="cell clean" onclick="prompt.show('q01', 100);sendQuestionOptions('q01');">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q01">
@@ -69,7 +69,7 @@
 					</div>
 				</td>
 
-				<td id="tq02" class="cell clean" onclick="prompt.show('q02', 100)sendQuestionOptions('q02')">
+				<td id="tq02" class="cell clean" onclick="prompt.show('q02', 100);sendQuestionOptions('q02');">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q02">
@@ -80,7 +80,7 @@
 					</div>
 				</td>
 
-				<td id="tq03" class="cell clean" onclick="prompt.show('q03', 100)sendQuestionOptions('q03')">
+				<td id="tq03" class="cell clean" onclick="prompt.show('q03', 100);sendQuestionOptions('q03');">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q03">
@@ -92,7 +92,7 @@
 					</div>
 				</td>
 
-				<td id="tq04" class="cell clean" onclick="prompt.show('q04', 100)sendQuestionOptions('q04')">
+				<td id="tq04" class="cell clean" onclick="prompt.show('q04', 100);sendQuestionOptions('q04');">
 					<h3>100</h3>
 					<div class="hide">
 						<div id="q04">
@@ -106,7 +106,7 @@
 			</tr>
 
 			<tr>
-				<td id="tq10" class="cell clean" onclick="prompt.show('q10', 200)sendQuestionOptions('q10')">
+				<td id="tq10" class="cell clean" onclick="prompt.show('q10', 200);sendQuestionOptions('q10');">
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q10">
@@ -120,7 +120,7 @@
 					</div>
 				</td>
 
-				<td id="tq11" class="cell clean" onclick="prompt.show('q11', 200)sendQuestionOptions('q11')">
+				<td id="tq11" class="cell clean" onclick="prompt.show('q11', 200);sendQuestionOptions('q11');">
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q11">
@@ -135,7 +135,7 @@
 					</div>
 				</td>
 
-				<td id="tq12" class="cell clean" onclick="prompt.show('q12', 200)sendQuestionOptions('q12')">
+				<td id="tq12" class="cell clean" onclick="prompt.show('q12', 200);sendQuestionOptions('q12');">
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q12">
@@ -148,7 +148,7 @@
 					</div>
 				</td>
 
-				<td id="tq13" class="cell clean" onclick="prompt.show('q13', 200)sendQuestionOptions('q13')">
+				<td id="tq13" class="cell clean" onclick="prompt.show('q13', 200);sendQuestionOptions('q13');">
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q13">
@@ -161,7 +161,7 @@
 					</div>
 				</td>
 
-				<td id="tq14" class="cell clean" onclick="prompt.show('q14', 200)sendQuestionOptions('q14')">
+				<td id="tq14" class="cell clean" onclick="prompt.show('q14', 200);sendQuestionOptions('q14');">
 					<h3>200</h3>
 					<div class="hide">
 						<div id="q14">
@@ -176,7 +176,7 @@
 			</tr>
 
 			<tr>
-				<td id="tq20" class="cell clean" onclick="prompt.show('q20', 300)sendQuestionOptions('q20')">
+				<td id="tq20" class="cell clean" onclick="prompt.show('q20', 300);sendQuestionOptions('q20');">
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q20">
@@ -190,7 +190,7 @@
 					</div>
 				</td>
 
-				<td id="tq21" class="cell clean" onclick="prompt.show('q21', 300)sendQuestionOptions('q21')">
+				<td id="tq21" class="cell clean" onclick="prompt.show('q21', 300);sendQuestionOptions('q21');">
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q21">
@@ -205,7 +205,7 @@
 					</div>
 				</td>
 
-				<td id="tq22" class="cell clean" onclick="prompt.show('q22', 300)sendQuestionOptions('q22')">
+				<td id="tq22" class="cell clean" onclick="prompt.show('q22', 300);sendQuestionOptions('q22');">
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q22">
@@ -219,7 +219,7 @@
 					</div>
 				</td>
 
-				<td id="tq23" class="cell clean" onclick="prompt.show('q23', 300)sendQuestionOptions('q23')">
+				<td id="tq23" class="cell clean" onclick="prompt.show('q23', 300);sendQuestionOptions('q23');">
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q23">
@@ -231,7 +231,7 @@
 					</div>
 				</td>
 
-				<td id="tq24" class="cell clean" onclick="prompt.show('q24', 300)sendQuestionOptions('q24')">
+				<td id="tq24" class="cell clean" onclick="prompt.show('q24', 300);sendQuestionOptions('q24');">
 					<h3>300</h3>
 					<div class="hide">
 						<div id="q24">
@@ -246,7 +246,7 @@
 			</tr>
 
 			<tr>
-				<td id="tq30" class="cell clean" onclick="prompt.show('q30', 400)sendQuestionOptions('q30')">
+				<td id="tq30" class="cell clean" onclick="prompt.show('q30', 400);sendQuestionOptions('q30');">
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q30">
@@ -258,7 +258,7 @@
 					</div>
 				</td>
 
-				<td id="tq31" class="cell clean" onclick="prompt.show('q31', 400)sendQuestionOptions('q31')">
+				<td id="tq31" class="cell clean" onclick="prompt.show('q31', 400);sendQuestionOptions('q31');">
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q31">
@@ -273,7 +273,7 @@
 					</div>
 				</td>
 
-				<td id="tq32" class="cell clean" onclick="prompt.show('q32', 400)sendQuestionOptions('q32')">
+				<td id="tq32" class="cell clean" onclick="prompt.show('q32', 400);sendQuestionOptions('q32');">
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q32">
@@ -286,7 +286,7 @@
 					</div>
 				</td>
 
-				<td id="tq33" class="cell clean" onclick="prompt.show('q33', 400)sendQuestionOptions('q33')">
+				<td id="tq33" class="cell clean" onclick="prompt.show('q33', 400);sendQuestionOptions('q33');">
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q33">
@@ -300,7 +300,7 @@
 					</div>
 				</td>
 
-				<td id="tq34" class="cell clean" onclick="prompt.show('q34', 400)sendQuestionOptions('q34')">
+				<td id="tq34" class="cell clean" onclick="prompt.show('q34', 400);sendQuestionOptions('q34');">
 					<h3>400</h3>
 					<div class="hide">
 						<div id="q34">
@@ -315,7 +315,7 @@
 			</tr>
 
 			<tr>
-				<td id="tq40" class="cell clean" onclick="prompt.show('q40', 500)sendQuestionOptions('q40')">
+				<td id="tq40" class="cell clean" onclick="prompt.show('q40', 500);sendQuestionOptions('q40');">
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q40">
@@ -327,7 +327,7 @@
 					</div>
 				</td>
 
-				<td id="tq41" class="cell clean" onclick="prompt.show('q41', 500)sendQuestionOptions('q41')">
+				<td id="tq41" class="cell clean" onclick="prompt.show('q41', 500);sendQuestionOptions('q41');">
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q41">
@@ -341,7 +341,7 @@
 					</div>
 				</td>
 
-				<td id="tq42" class="cell clean" onclick="prompt.show('q42', 500)sendQuestionOptions('q42')">
+				<td id="tq42" class="cell clean" onclick="prompt.show('q42', 500);sendQuestionOptions('q42');">
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q42">
@@ -354,7 +354,7 @@
 					</div>
 				</td>
 
-				<td id="tq43" class="cell clean" onclick="prompt.show('q43', 500)sendQuestionOptions('q43')">
+				<td id="tq43" class="cell clean" onclick="prompt.show('q43', 500);sendQuestionOptions('q43');">
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q43">
@@ -369,7 +369,7 @@
 					</div>
 				</td>
 
-				<td id="tq44" class="cell clean" onclick="prompt.show('q44', 500)sendQuestionOptions('q44')">
+				<td id="tq44" class="cell clean" onclick="prompt.show('q44', 500);sendQuestionOptions('q44');">
 					<h3>500</h3>
 					<div class="hide">
 						<div id="q44">

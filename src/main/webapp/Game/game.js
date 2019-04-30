@@ -160,9 +160,11 @@ menu.startJoining = function()
 	$('#joining').show();
 	$('#jsuccess').show();
 	var t = function() { 
-		$('#jsuccess').hide();
-		$('#teamselect').fadeIn(1000);
- 	}
+		document.getElementById("jsuccess").className = "hide";
+		document.getElementById("jsuccess").className = "show";
+		//$('#jsuccess').fadeOut(1000);
+		//$('#teamselect').fadeIn(1000);
+	 }
 	setTimeout( t, 2000);
 }
 menu.teamSelected = function() 

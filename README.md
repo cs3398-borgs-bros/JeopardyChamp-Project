@@ -21,7 +21,7 @@ Daniel: I was able to update the extensions/dependencies to later builds. Depend
 
 Luke: Able to apply modifications to the CSS. Researched on modifiying the scripts of the web application.
 
-Elvin: CSS modifications and reserch on automated testing for gui.
+Elvin: CSS modifications and reserch on automated testing for gui.[sylesheet.css](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/StyleSheet.css)
 
 ### Project Status/Next Step:
 Walter: My next step would be testing and implementation of multiplayer within the game.

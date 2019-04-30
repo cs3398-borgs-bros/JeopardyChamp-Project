@@ -495,7 +495,7 @@
 					  <td><ul id ="tm2"></ul></td>
 					</tr>
 				  </table>
-			<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init()" />
+			<input class="submit" type="button" id="startsubmit" value="Start Game" onclick="game.init(); startGame();" />
 		</div>
 
 		<div class="clear"></div>

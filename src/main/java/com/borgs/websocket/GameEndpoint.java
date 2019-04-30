@@ -110,7 +110,21 @@ public class GameEndpoint {
                 }
             }
         }
-        
+        //If BROADCAST
+        else if(gamemsg.getMessageType() == MessageType.BROADCAST) {
+            String msg = gamemsg.getMessage();
+            if (msg.equals("START")) {
+                for (Room r : rooms) { 
+                    if (session.getId() == r.getHost().getId()){
+                        System.out.println("Host found room, starting game");
+                        r.sendMessage("START");
+                    }
+                }   
+            }
+            //else if();   
+        }
+
+
     }
 
     /**

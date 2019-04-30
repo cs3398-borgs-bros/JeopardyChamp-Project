@@ -28,7 +28,6 @@ websocket.onmessage = function (event) {
             var nam = str.slice(7);
             document.getElementById("tm2").innerHTML += "<li>" + nam + "</li>";
         }
-        
     }
 };
 websocket.onerror = function(e) {   };
@@ -47,6 +46,14 @@ function hostMessage() {
     if (websocket != null && websocket.readyState == 1) {
         var input = document.getElementById("gameID").innerHTML.toString();
         var message = { messageType: 'HOST', message: input };
+        websocket.send(JSON.stringify(message));
+    }
+}
+
+function startGame() {
+    if (websocket != null && websocket.readyState == 1) {
+        input = "START";
+        var message = { messageType: 'BROADCAST', message: input };
         websocket.send(JSON.stringify(message));
     }
 }

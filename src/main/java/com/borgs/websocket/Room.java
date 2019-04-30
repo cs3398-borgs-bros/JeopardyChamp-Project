@@ -21,6 +21,8 @@ public class Room {
 
 	public String getCode() {	return code;	}	
 
+	public Session getHost() { return this.host; }
+
 	public void hostJoin(Session session) {
 		this.host = session;
 	}

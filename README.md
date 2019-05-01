@@ -14,7 +14,9 @@ The project can be viewed in the link above. The project still requires some wor
 
 Walter:  
 
-Carter: 
+Carter: one feature is that i helped implement the multiplayer aspect 
+for the jeopardy game, helped with the building of the room for the users, developing the server interaction with user and also join and implemented sendQuestionOption, to help send the question choices. JeopardyChamp-Project/src/main/java/com/borgs/websocket/Room.java
+JeopardyChamp-Project/src/main/java/com/borgs/websocket/index.jsp 
 
 Daniel: I was able to separate the plugins and add comments to indicate the section's purpose in the game scripts and html to keep the project manageable. I also was able to create a functioning implementation of a websocket interaction with the server, which allowed for the multiplayer interaction with the server. [JSP and Javascript files](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game), [Java Files](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/java/com/borgs/websocket)
 

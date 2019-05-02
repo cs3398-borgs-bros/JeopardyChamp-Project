@@ -12,7 +12,7 @@ The project can be viewed in the link above. The project still requires some wor
 
 ## Sprint 3 Review and Retrospective - 4/30/19
 
-Walter:  
+Walter: I establish the layout on how the user would interact with the game via buttons. [JSP File](JeopardyChamp-Project/src/main/java/com/borgs/websocket/index.jsp) . I also implemented the host log in and user response layout but this was later removed an implemented with a improved version.
 
 Carter: one feature is that i helped implement the multiplayer aspect 
 for the jeopardy game, helped with the building of the room for the users, developing the server interaction with user and also join and implemented sendQuestionOption, to help send the question choices. JeopardyChamp-Project/src/main/java/com/borgs/websocket/Room.java

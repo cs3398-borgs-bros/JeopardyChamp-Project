@@ -12,15 +12,17 @@ The project can be viewed in the link above. The project still requires some wor
 
 ## Sprint 3 Review and Retrospective - 4/30/19
 
-Walter:  
+Walter: I establish the layout on how the user would interact with the game via buttons. [JSP File](JeopardyChamp-Project/src/main/java/com/borgs/websocket/index.jsp) . I also implemented the host log in and user response layout but this was later removed an implemented with a improved version.
 
-Carter: 
+Carter: one feature is that i helped implement the multiplayer aspect 
+for the jeopardy game, helped with the building of the room for the users, developing the server interaction with user and also join and implemented sendQuestionOption, to help send the question choices. JeopardyChamp-Project/src/main/java/com/borgs/websocket/Room.java
+JeopardyChamp-Project/src/main/java/com/borgs/websocket/index.jsp 
 
 Daniel: I was able to separate the plugins and add comments to indicate the section's purpose in the game scripts and html to keep the project manageable. I also was able to create a functioning implementation of a websocket interaction with the server, which allowed for the multiplayer interaction with the server. [JSP and Javascript files](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game), [Java Files](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/java/com/borgs/websocket)
 
-Luke: 
+Luke: researched what modifications could made to the CSS and the current bank of available jeopardy questions
 
-Elvin: 
+Elvin: added additional css for buttons, layout config, and user input.[style.css](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/styles.css)
 
 ### Retrospective
 

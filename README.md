@@ -22,7 +22,7 @@ Daniel: I was able to separate the plugins and add comments to indicate the sect
 
 Luke: 
 
-Elvin: 
+Elvin: added additional css for buttons, layout config, and user input.
 
 ### Retrospective
 

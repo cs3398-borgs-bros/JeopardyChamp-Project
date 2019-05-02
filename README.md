@@ -22,7 +22,7 @@ Daniel: I was able to separate the plugins and add comments to indicate the sect
 
 Luke: researched what modifications could made to the CSS and the current bank of available jeopardy questions
 
-Elvin: added additional css for buttons, layout config, and user input.
+Elvin: added additional css for buttons, layout config, and user input.[style.css](https://github.com/cs3398-borgs-bros/JeopardyChamp-Project/blob/master/src/main/webapp/Game/styles.css)
 
 ### Retrospective
 

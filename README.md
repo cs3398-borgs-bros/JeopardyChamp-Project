@@ -1,3 +1,7 @@
+# CS3398: Software Engineering - Spring 2019
+This project was constructed over a 2 month period in order to educate us on the process of working as a team in the software development field. We were asked report and demo our project in front of our professor and peers to help simulate what it would be like in the industry. We were able to learn the challenges of working and communicating efficiently as a team, as well as how to overcome the challenges, when creating the software. Although this project is not completed, the process of creating the game as a team helped to teach us many lessons about software engineering. 
+
+
 # Jeopardy Champ! 
 
 The Borgs Bros team is creating a game that will be the hottest learning tool on the market so that institutes of higher education can provide a more interactive learning experience that that bridges the gap between students and faculty.
